@@ -1,0 +1,6556 @@
+
+@prefix : <http://rpcw.di.uminho.pt/2025/EMD/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2025/EMD/> .
+
+<http://rpcw.di.uminho.pt/2025/EMD> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/EMD#pratica
+:pratica rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éPraticadaPor ;
+         rdfs:domain :Pessoa ;
+         rdfs:range :Modalidade .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#realiza
+:realiza rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éRealizadoPor ;
+         rdfs:domain :Pessoa ;
+         rdfs:range :Exame .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#relativoA
+:relativoA rdf:type owl:ObjectProperty ;
+           owl:inverseOf :temExame ;
+           rdfs:domain :Exame ;
+           rdfs:range :Modalidade .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#temAtleta
+:temAtleta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :éAtletaDe .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#temExame
+:temExame rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#temModalidade
+:temModalidade rdf:type owl:ObjectProperty ;
+               owl:inverseOf :éPraticadaEm ;
+               rdfs:domain :Clube ;
+               rdfs:range :Modalidade .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#éAtletaDe
+:éAtletaDe rdf:type owl:ObjectProperty ;
+           rdfs:domain :Pessoa ;
+           rdfs:range :Clube .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#éPraticadaEm
+:éPraticadaEm rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#éPraticadaPor
+:éPraticadaPor rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#éRealizadoPor
+:éRealizadoPor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/EMD#dataEMD
+:dataEMD rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#email
+:email rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#gênero
+:gênero rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#idade
+:idade rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#morada
+:morada rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#resultado
+:resultado rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/EMD#Clube
+:Clube rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#Exame
+:Exame rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#Modalidade
+:Modalidade rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P0
+:P0 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "emily.terrell@gdgoma.org" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Clay" ;
+    :nome "Emily Terrell" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C0
+:C0 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P0 ;
+    :nome "GDGoma" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M0
+:M0 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E0 ;
+    :éPraticadaEm :C0 ;
+    :éPraticadaPor :P0 ;
+    :nome "Futebol" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E0
+:E0 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP0 ;
+    :dataEMD "2020-07-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P1
+:P1 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "medina.hartman@avcfamalicão.name" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Orick" ;
+    :nome "Medina Hartman" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C1
+:C1 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P1 ;
+    :nome "AVCfamalicão" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M1
+:M1 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E1 ;
+    :éPraticadaEm :C1 ;
+    :éPraticadaPor :P1 ;
+    :nome "Triatlo" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E1
+:E1 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP1 ;
+    :dataEMD "2019-01-17" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P2
+:P2 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "andrews.rivas@abcbraga.us" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Saticoy" ;
+    :nome "Andrews Rivas" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C2
+:C2 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P2 ;
+    :nome "ABCbraga" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M2
+:M2 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E2 ;
+    :éPraticadaEm :C2 ;
+    :éPraticadaPor :P2 ;
+    :nome "Badminton" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E2
+:E2 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP2 ;
+    :dataEMD "2020-04-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P3
+:P3 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "marcella.combs@clube de orientação do minho.com" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Manila" ;
+    :nome "Marcella Combs" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C3
+:C3 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P3 ;
+    :nome "Clube de Orientação do Minho" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M3
+:M3 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E3 ;
+    :éPraticadaEm :C3 ;
+    :éPraticadaPor :P3 ;
+    :nome "Ciclismo" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E3
+:E3 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP3 ;
+    :dataEMD "2020-06-12" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P4
+:P4 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mendoza.buckner@scbraga.ca" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Brogan" ;
+    :nome "Mendoza Buckner" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C4
+:C4 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P4 ;
+    :nome "SCBraga" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M4
+:M4 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E4 ;
+    :éPraticadaEm :C4 ;
+    :éPraticadaPor :P4 ;
+    :nome "Patinagem" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E4
+:E4 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP4 ;
+    :dataEMD "2019-09-13" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P5
+:P5 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sellers.copeland@clube de orientação do minho.net" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Spelter" ;
+    :nome "Sellers Copeland" .
+    
+    :MM1 :temExame :E5 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P5 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E5
+:E5 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP5 ;
+    :dataEMD "2021-04-25" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P6
+:P6 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bernard.stokes@avcfamalicão.biz" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Sussex" ;
+    :nome "Bernard Stokes" .
+    
+    :MM2 :temExame :E6 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P6 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E6
+:E6 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP6 ;
+    :dataEMD "2020-12-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P7
+:P7 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "alfreda.raymond@abcbraga.tv" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Sultana" ;
+    :nome "Alfreda Raymond" .
+    
+    :MM1 :temExame :E7 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P7 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E7
+:E7 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP7 ;
+    :dataEMD "2021-03-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P8
+:P8 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "alston.green@scbraga.biz" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Thornport" ;
+    :nome "Alston Green" .
+    
+    :MM1 :temExame :E8 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P8 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E8
+:E8 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP8 ;
+    :dataEMD "2021-05-29" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P9
+:P9 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "paige.mccarthy@acdrcrespos.co.uk" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Brandywine" ;
+    :nome "Paige Mccarthy" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C5
+:C5 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P9 ;
+    :nome "ACDRcrespos" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M5
+:M5 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E9 ;
+    :éPraticadaEm :C5 ;
+    :éPraticadaPor :P9 ;
+    :nome "Parapente" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E9
+:E9 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP9 ;
+    :dataEMD "2019-10-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P10
+:P10 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "claudine.gill@acrroriz.me" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Katonah" ;
+    :nome "Claudine Gill" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C6
+:C6 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P10 ;
+    :nome "ACRroriz" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M6
+:M6 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E10 ;
+    :éPraticadaEm :C6 ;
+    :éPraticadaPor :P10 ;
+    :nome "Orientação" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E10
+:E10 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP10 ;
+    :dataEMD "2020-08-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P11
+:P11 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "summer.calhoun@clube de orientação do minho.info" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "National" ;
+    :nome "Summer Calhoun" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M7
+:M7 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E11 ;
+    :éPraticadaEm :C3 ;
+    :éPraticadaPor :P11 ;
+    :nome "Esgrima" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E11
+:E11 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP11 ;
+    :dataEMD "2019-12-03" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P12
+:P12 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "slater.david@vitoria.org" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Chicopee" ;
+    :nome "Slater David" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C7
+:C7 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P12 ;
+    :nome "Vitoria" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M8
+:M8 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E12 ;
+    :éPraticadaEm :C7 ;
+    :éPraticadaPor :P12 ;
+    :nome "BTT" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E12
+:E12 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP12 ;
+    :dataEMD "2020-01-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P13
+:P13 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ophelia.boyd@amigosmontanha.name" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Chaparrito" ;
+    :nome "Ophelia Boyd" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C8
+:C8 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P13 ;
+    :nome "AmigosMontanha" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M9
+:M9 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E13 ;
+    :éPraticadaEm :C8 ;
+    :éPraticadaPor :P13 ;
+    :nome "Atletismo" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E13
+:E13 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP13 ;
+    :dataEMD "2020-09-03" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P14
+:P14 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "evans.singleton@clube de orientação do minho.us" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Sunwest" ;
+    :nome "Evans Singleton" .
+    
+    :MM6 :temExame :E14 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P14 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E14
+:E14 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP14 ;
+    :dataEMD "2019-08-02" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P15
+:P15 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "church.bishop@vitoria.com" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Vallonia" ;
+    :nome "Church Bishop" .
+    
+    :MM6 :temExame :E15 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P15 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E15
+:E15 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP15 ;
+    :dataEMD "2020-08-07" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P16
+:P16 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "woodard.bennett@edviana.ca" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Ruckersville" ;
+    :nome "Woodard Bennett" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#C9
+:C9 rdf:type owl:NamedIndividual ,
+             :Clube ;
+    :temAtleta :P16 ;
+    :nome "EDViana" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#M10
+:M10 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E16 ;
+    :éPraticadaEm :C9 ;
+    :éPraticadaPor :P16 ;
+    :nome "SUP" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E16
+:E16 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP16 ;
+    :dataEMD "2019-07-13" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P17
+:P17 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "vasquez.michael@vitoria.net" ;
+    :género "M" ;
+    :idade 27 ;
+    :morada "Munjor" ;
+    :nome "Vasquez Michael" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M11
+:M11 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E17 ;
+    :éPraticadaEm :C7 ;
+    :éPraticadaPor :P17 ;
+    :nome "Basquetebol" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E17
+:E17 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP17 ;
+    :dataEMD "2019-09-15" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P18
+:P18 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "holloway.maxwell@avcfamalicão.biz" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Waikele" ;
+    :nome "Holloway Maxwell" .
+    
+    :MM3 :temExame :E18 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P18 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E18
+:E18 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP18 ;
+    :dataEMD "2019-09-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P19
+:P19 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "michele.barber@clube de orientação do minho.tv" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Oberlin" ;
+    :nome "Michele Barber" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M12
+:M12 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E19 ;
+    :éPraticadaEm :C3 ;
+    :éPraticadaPor :P19 ;
+    :nome "Karaté" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E19
+:E19 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP19 ;
+    :dataEMD "2020-02-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P20
+:P20 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "chambers.burton@vitoria.biz" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Boling" ;
+    :nome "Chambers Burton" .
+    
+    :MM10 :temExame :E20 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P20 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E20
+:E20 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP20 ;
+    :dataEMD "2020-03-01" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P21
+:P21 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "massey.goodman@amigosmontanha.co.uk" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Garfield" ;
+    :nome "Massey Goodman" .
+    
+    :MM8 :temExame :E21 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P21 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E21
+:E21 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP21 ;
+    :dataEMD "2021-03-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P22
+:P22 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "klein.cameron@scbraga.me" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Twilight" ;
+    :nome "Klein Cameron" .
+    
+    :MM0 :temExame :E22 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P22 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E22
+:E22 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP22 ;
+    :dataEMD "2021-02-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P23
+:P23 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lambert.mueller@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Oretta" ;
+    :nome "Lambert Mueller" .
+    
+    :MM11 :temExame :E23 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P23 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E23
+:E23 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP23 ;
+    :dataEMD "2020-07-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P24
+:P24 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ewing.drake@acdrcrespos.org" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Nanafalia" ;
+    :nome "Ewing Drake" .
+    
+    :MM3 :temExame :E24 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P24 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E24
+:E24 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP24 ;
+    :dataEMD "2021-02-15" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P25
+:P25 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lester.manning@acdrcrespos.name" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Grandview" ;
+    :nome "Lester Manning" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M13
+:M13 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E25 ;
+    :éPraticadaEm :C5 ;
+    :éPraticadaPor :P25 ;
+    :nome "Dança" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E25
+:E25 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP25 ;
+    :dataEMD "2019-01-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P26
+:P26 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "nina.fowler@amigosmontanha.us" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Turah" ;
+    :nome "Nina Fowler" .
+    
+    :MM0 :temExame :E26 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P26 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E26
+:E26 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP26 ;
+    :dataEMD "2020-04-16" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P27
+:P27 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lynn.shaw@clube de orientação do minho.com" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Cutter" ;
+    :nome "Lynn Shaw" .
+    
+    :MM10 :temExame :E27 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P27 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E27
+:E27 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP27 ;
+    :dataEMD "2020-07-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P28
+:P28 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "betty.blake@abcbraga.ca" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Teasdale" ;
+    :nome "Betty Blake" .
+    
+    :MM2 :temExame :E28 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P28 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E28
+:E28 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP28 ;
+    :dataEMD "2021-01-13" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P29
+:P29 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "oneill.roth@edviana.net" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Graball" ;
+    :nome "Oneill Roth" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M14
+:M14 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E29 ;
+    :éPraticadaEm :C9 ;
+    :éPraticadaPor :P29 ;
+    :nome "Andebol" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E29
+:E29 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP29 ;
+    :dataEMD "2020-10-23" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P30
+:P30 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "roxanne.miles@vitoria.biz" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Haring" ;
+    :nome "Roxanne Miles" .
+    
+    :MM2 :temExame :E30 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P30 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E30
+:E30 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP30 ;
+    :dataEMD "2019-06-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P31
+:P31 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cecelia.adams@amigosmontanha.tv" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Fairlee" ;
+    :nome "Cecelia Adams" .
+    
+    :MM0 :temExame :E31 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P31 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E31
+:E31 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP31 ;
+    :dataEMD "2019-04-20" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P32
+:P32 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "irma.jacobs@edviana.biz" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Driftwood" ;
+    :nome "Irma Jacobs" .
+    
+    :MM9 :temExame :E32 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P32 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E32
+:E32 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP32 ;
+    :dataEMD "2019-12-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P33
+:P33 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "angelia.noel@edviana.co.uk" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Martell" ;
+    :nome "Angelia Noel" .
+    
+    :MM6 :temExame :E33 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P33 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E33
+:E33 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP33 ;
+    :dataEMD "2020-12-23" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P34
+:P34 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sallie.shaffer@clube de orientação do minho.me" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Brownlee" ;
+    :nome "Sallie Shaffer" .
+    
+    :MM3 :temExame :E34 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P34 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E34
+:E34 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP34 ;
+    :dataEMD "2020-06-02" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P35
+:P35 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jordan.bonner@vitoria.info" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Northchase" ;
+    :nome "Jordan Bonner" .
+    
+    :MM10 :temExame :E35 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P35 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E35
+:E35 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP35 ;
+    :dataEMD "2020-06-22" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P36
+:P36 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bartlett.sexton@gdgoma.org" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Rehrersburg" ;
+    :nome "Bartlett Sexton" .
+    
+    :MM9 :temExame :E36 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P36 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E36
+:E36 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP36 ;
+    :dataEMD "2019-12-17" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P37
+:P37 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "opal.stewart@avcfamalicão.name" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Dola" ;
+    :nome "Opal Stewart" .
+    
+    :MM11 :temExame :E37 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P37 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E37
+:E37 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP37 ;
+    :dataEMD "2019-07-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P38
+:P38 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ola.glover@clube de orientação do minho.us" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Barronett" ;
+    :nome "Ola Glover" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M15
+:M15 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E38 ;
+    :éPraticadaEm :C3 ;
+    :éPraticadaPor :P38 ;
+    :nome "Equitação" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E38
+:E38 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP38 ;
+    :dataEMD "2020-11-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P39
+:P39 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "shelia.york@scbraga.com" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Escondida" ;
+    :nome "Shelia York" .
+    
+    :MM6 :temExame :E39 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P39 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E39
+:E39 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP39 ;
+    :dataEMD "2019-11-21" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P40
+:P40 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "raquel.ratliff@abcbraga.ca" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Goldfield" ;
+    :nome "Raquel Ratliff" .
+    
+    :MM4 :temExame :E40 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P40 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E40
+:E40 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP40 ;
+    :dataEMD "2019-07-31" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P41
+:P41 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "burke.weeks@amigosmontanha.net" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Mapletown" ;
+    :nome "Burke Weeks" .
+    
+    :MM5 :temExame :E41 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P41 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E41
+:E41 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP41 ;
+    :dataEMD "2019-09-14" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P42
+:P42 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "best.french@gdgoma.biz" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Longbranch" ;
+    :nome "Best French" .
+    
+    :MM3 :temExame :E42 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P42 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E42
+:E42 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP42 ;
+    :dataEMD "2019-04-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P43
+:P43 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "fowler.alvarez@amigosmontanha.tv" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Choctaw" ;
+    :nome "Fowler Alvarez" .
+    
+    :MM7 :temExame :E43 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P43 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E43
+:E43 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP43 ;
+    :dataEMD "2019-10-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P44
+:P44 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "terri.avila@avcfamalicão.biz" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Crown" ;
+    :nome "Terri Avila" .
+    
+    :MM7 :temExame :E44 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P44 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E44
+:E44 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP44 ;
+    :dataEMD "2020-03-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P45
+:P45 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "alford.small@avcfamalicão.co.uk" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Alamo" ;
+    :nome "Alford Small" .
+    
+    :MM2 :temExame :E45 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P45 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E45
+:E45 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP45 ;
+    :dataEMD "2019-10-14" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P46
+:P46 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "key.arnold@amigosmontanha.me" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Orason" ;
+    :nome "Key Arnold" .
+    
+    :MM3 :temExame :E46 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P46 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E46
+:E46 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP46 ;
+    :dataEMD "2020-03-01" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P47
+:P47 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "nguyen.diaz@amigosmontanha.info" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Watchtower" ;
+    :nome "Nguyen Diaz" .
+    
+    :MM8 :temExame :E47 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P47 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E47
+:E47 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP47 ;
+    :dataEMD "2021-04-16" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P48
+:P48 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sherry.morales@avcfamalicão.org" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Waukeenah" ;
+    :nome "Sherry Morales" .
+    
+    :MM9 :temExame :E48 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P48 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E48
+:E48 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP48 ;
+    :dataEMD "2021-04-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P49
+:P49 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "crane.ballard@vitoria.name" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Fedora" ;
+    :nome "Crane Ballard" .
+    
+    :MM8 :temExame :E49 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P49 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E49
+:E49 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP49 ;
+    :dataEMD "2019-09-11" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P50
+:P50 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "terry.chaney@scbraga.us" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Blanco" ;
+    :nome "Terry Chaney" .
+    
+    :MM12 :temExame :E50 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P50 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E50
+:E50 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP50 ;
+    :dataEMD "2020-07-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P51
+:P51 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sheppard.bryant@avcfamalicão.com" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Brandermill" ;
+    :nome "Sheppard Bryant" .
+    
+    :MM12 :temExame :E51 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P51 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E51
+:E51 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP51 ;
+    :dataEMD "2019-03-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P52
+:P52 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "janis.mckinney@abcbraga.ca" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Osage" ;
+    :nome "Janis Mckinney" .
+    
+    :MM8 :temExame :E52 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P52 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E52
+:E52 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP52 ;
+    :dataEMD "2020-11-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P53
+:P53 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sue.waters@vitoria.net" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Carrizo" ;
+    :nome "Sue Waters" .
+    
+    :MM14 :temExame :E53 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P53 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E53
+:E53 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP53 ;
+    :dataEMD "2020-05-10" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P54
+:P54 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cynthia.page@acrroriz.biz" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Forestburg" ;
+    :nome "Cynthia Page" .
+    
+    :MM15 :temExame :E54 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P54 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E54
+:E54 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP54 ;
+    :dataEMD "2019-05-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P55
+:P55 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "montgomery.rhodes@vitoria.tv" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Rivers" ;
+    :nome "Montgomery Rhodes" .
+    
+    :MM9 :temExame :E55 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P55 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E55
+:E55 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP55 ;
+    :dataEMD "2019-10-14" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P56
+:P56 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "claire.joyce@acdrcrespos.biz" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Belgreen" ;
+    :nome "Claire Joyce" .
+    
+    :MM11 :temExame :E56 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P56 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E56
+:E56 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP56 ;
+    :dataEMD "2021-03-22" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P57
+:P57 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "evangelina.key@acdrcrespos.co.uk" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Whitewater" ;
+    :nome "Evangelina Key" .
+    
+    :MM3 :temExame :E57 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P57 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E57
+:E57 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP57 ;
+    :dataEMD "2021-04-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P58
+:P58 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "effie.gibson@acrroriz.me" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Virgie" ;
+    :nome "Effie Gibson" .
+    
+    :MM14 :temExame :E58 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P58 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E58
+:E58 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP58 ;
+    :dataEMD "2020-11-24" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P59
+:P59 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "maureen.cobb@amigosmontanha.info" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Venice" ;
+    :nome "Maureen Cobb" .
+    
+    :MM4 :temExame :E59 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P59 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E59
+:E59 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP59 ;
+    :dataEMD "2021-03-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P60
+:P60 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "dee.holman@avcfamalicão.org" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Brenton" ;
+    :nome "Dee Holman" .
+    
+    :MM5 :temExame :E60 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P60 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E60
+:E60 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP60 ;
+    :dataEMD "2020-11-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P61
+:P61 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "larson.morin@gdgoma.name" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Summerset" ;
+    :nome "Larson Morin" .
+    
+    :MM14 :temExame :E61 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P61 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E61
+:E61 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP61 ;
+    :dataEMD "2019-02-13" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P62
+:P62 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ursula.martinez@amigosmontanha.us" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Lorraine" ;
+    :nome "Ursula Martinez" .
+    
+    :MM13 :temExame :E62 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P62 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E62
+:E62 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP62 ;
+    :dataEMD "2021-01-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P63
+:P63 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "english.clemons@gdgoma.com" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Ticonderoga" ;
+    :nome "English Clemons" .
+    
+    :MM11 :temExame :E63 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P63 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E63
+:E63 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP63 ;
+    :dataEMD "2020-10-10" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P64
+:P64 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "stella.jackson@acdrcrespos.ca" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Kaka" ;
+    :nome "Stella Jackson" .
+    
+    :MM2 :temExame :E64 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P64 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E64
+:E64 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP64 ;
+    :dataEMD "2020-10-28" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P65
+:P65 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "haley.joseph@avcfamalicão.net" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Brantleyville" ;
+    :nome "Haley Joseph" .
+    
+    :MM3 :temExame :E65 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P65 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E65
+:E65 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP65 ;
+    :dataEMD "2019-05-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P66
+:P66 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kelsey.roberts@vitoria.biz" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Morgandale" ;
+    :nome "Kelsey Roberts" .
+    
+    :MM4 :temExame :E66 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P66 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E66
+:E66 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP66 ;
+    :dataEMD "2020-04-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P67
+:P67 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "watson.lynch@gdgoma.tv" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Fillmore" ;
+    :nome "Watson Lynch" .
+    
+    :MM13 :temExame :E67 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P67 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E67
+:E67 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP67 ;
+    :dataEMD "2019-06-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P68
+:P68 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "chasity.coffey@edviana.biz" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Kersey" ;
+    :nome "Chasity Coffey" .
+    
+    :MM12 :temExame :E68 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P68 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E68
+:E68 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP68 ;
+    :dataEMD "2021-05-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P69
+:P69 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "paula.delaney@edviana.co.uk" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Disautel" ;
+    :nome "Paula Delaney" .
+    
+    :MM13 :temExame :E69 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P69 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E69
+:E69 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP69 ;
+    :dataEMD "2021-02-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P70
+:P70 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "galloway.sanders@acrroriz.me" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Allendale" ;
+    :nome "Galloway Sanders" .
+    
+    :MM0 :temExame :E70 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P70 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E70
+:E70 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP70 ;
+    :dataEMD "2019-06-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P71
+:P71 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tina.blankenship@acdrcrespos.info" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Longoria" ;
+    :nome "Tina Blankenship" .
+    
+    :MM10 :temExame :E71 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P71 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E71
+:E71 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP71 ;
+    :dataEMD "2021-04-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P72
+:P72 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "whitehead.montgomery@avcfamalicão.org" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Fairview" ;
+    :nome "Whitehead Montgomery" .
+    
+    :MM5 :temExame :E72 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P72 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E72
+:E72 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP72 ;
+    :dataEMD "2021-04-11" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P73
+:P73 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "dominguez.chambers@abcbraga.name" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Malott" ;
+    :nome "Dominguez Chambers" .
+    
+    :MM15 :temExame :E73 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P73 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E73
+:E73 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP73 ;
+    :dataEMD "2021-04-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P74
+:P74 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "booth.eaton@scbraga.us" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Terlingua" ;
+    :nome "Booth Eaton" .
+    
+    :MM1 :temExame :E74 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P74 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E74
+:E74 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP74 ;
+    :dataEMD "2019-05-23" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P75
+:P75 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "joanna.grant@amigosmontanha.com" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Noblestown" ;
+    :nome "Joanna Grant" .
+    
+    :MM5 :temExame :E75 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P75 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E75
+:E75 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP75 ;
+    :dataEMD "2019-07-14" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P76
+:P76 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jeri.pearson@acrroriz.ca" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Falmouth" ;
+    :nome "Jeri Pearson" .
+    
+    :MM6 :temExame :E76 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P76 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E76
+:E76 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP76 ;
+    :dataEMD "2019-03-28" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P77
+:P77 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sanchez.mcgee@acdrcrespos.net" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Bascom" ;
+    :nome "Sanchez Mcgee" .
+    
+    :MM3 :temExame :E77 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P77 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E77
+:E77 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP77 ;
+    :dataEMD "2021-05-13" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P78
+:P78 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "magdalena.francis@acdrcrespos.biz" ;
+    :género "M" ;
+    :idade 27 ;
+    :morada "Fostoria" ;
+    :nome "Magdalena Francis" .
+    
+    :MM7 :temExame :E78 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P78 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E78
+:E78 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP78 ;
+    :dataEMD "2019-12-02" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P79
+:P79 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "morris.poole@avcfamalicão.tv" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Steinhatchee" ;
+    :nome "Morris Poole" .
+    
+    :MM2 :temExame :E79 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P79 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E79
+:E79 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP79 ;
+    :dataEMD "2021-05-19" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P80
+:P80 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "rodriguez.gonzalez@gdgoma.biz" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Coaldale" ;
+    :nome "Rodriguez Gonzalez" .
+    
+    :MM1 :temExame :E80 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P80 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E80
+:E80 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP80 ;
+    :dataEMD "2021-02-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P81
+:P81 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "christine.rice@gdgoma.co.uk" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Hayes" ;
+    :nome "Christine Rice" .
+    
+    :MM6 :temExame :E81 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P81 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E81
+:E81 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP81 ;
+    :dataEMD "2021-05-18" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P82
+:P82 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "valdez.harper@amigosmontanha.me" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Jacksonwald" ;
+    :nome "Valdez Harper" .
+    
+    :MM12 :temExame :E82 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P82 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E82
+:E82 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP82 ;
+    :dataEMD "2020-11-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P83
+:P83 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "berta.clay@clube de orientação do minho.info" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Barclay" ;
+    :nome "Berta Clay" .
+    
+    :MM9 :temExame :E83 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P83 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E83
+:E83 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP83 ;
+    :dataEMD "2021-04-24" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P84
+:P84 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bonnie.sandoval@clube de orientação do minho.org" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Shaft" ;
+    :nome "Bonnie Sandoval" .
+    
+    :MM15 :temExame :E84 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P84 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E84
+:E84 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP84 ;
+    :dataEMD "2019-10-18" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P85
+:P85 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "stein.wiggins@edviana.name" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Rosine" ;
+    :nome "Stein Wiggins" .
+    
+    :MM9 :temExame :E85 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P85 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E85
+:E85 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP85 ;
+    :dataEMD "2020-11-24" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P86
+:P86 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tanya.mcclain@gdgoma.us" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Fivepointville" ;
+    :nome "Tanya Mcclain" .
+    
+    :MM10 :temExame :E86 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P86 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E86
+:E86 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP86 ;
+    :dataEMD "2020-12-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P87
+:P87 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "perry.sanford@vitoria.com" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Albany" ;
+    :nome "Perry Sanford" .
+    
+    :MM9 :temExame :E87 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P87 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E87
+:E87 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP87 ;
+    :dataEMD "2021-02-23" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P88
+:P88 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "maxine.rutledge@amigosmontanha.ca" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Caberfae" ;
+    :nome "Maxine Rutledge" .
+    
+    :MM2 :temExame :E88 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P88 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E88
+:E88 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP88 ;
+    :dataEMD "2019-10-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P89
+:P89 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tucker.morse@scbraga.net" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Tyhee" ;
+    :nome "Tucker Morse" .
+    
+    :MM2 :temExame :E89 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P89 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E89
+:E89 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP89 ;
+    :dataEMD "2020-07-01" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P90
+:P90 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "thelma.schmidt@acrroriz.biz" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Greenfields" ;
+    :nome "Thelma Schmidt" .
+    
+    :MM2 :temExame :E90 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P90 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E90
+:E90 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP90 ;
+    :dataEMD "2020-05-17" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P91
+:P91 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "charles.kim@acdrcrespos.tv" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Bennett" ;
+    :nome "Charles Kim" .
+    
+    :MM8 :temExame :E91 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P91 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E91
+:E91 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP91 ;
+    :dataEMD "2020-03-24" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P92
+:P92 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "duncan.davidson@amigosmontanha.biz" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Cedarville" ;
+    :nome "Duncan Davidson" .
+    
+    :MM12 :temExame :E92 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P92 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E92
+:E92 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP92 ;
+    :dataEMD "2020-01-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P93
+:P93 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "gertrude.dillon@acrroriz.co.uk" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Oneida" ;
+    :nome "Gertrude Dillon" .
+    
+    :MM2 :temExame :E93 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P93 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E93
+:E93 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP93 ;
+    :dataEMD "2019-04-07" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P94
+:P94 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "brennan.santana@vitoria.me" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Villarreal" ;
+    :nome "Brennan Santana" .
+    
+    :MM8 :temExame :E94 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P94 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E94
+:E94 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP94 ;
+    :dataEMD "2019-02-06" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P95
+:P95 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ball.barlow@amigosmontanha.info" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Hobucken" ;
+    :nome "Ball Barlow" .
+    
+    :MM5 :temExame :E95 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P95 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E95
+:E95 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP95 ;
+    :dataEMD "2020-11-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P96
+:P96 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "oneil.baxter@clube de orientação do minho.org" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Sanders" ;
+    :nome "Oneil Baxter" .
+    
+    :MM1 :temExame :E96 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P96 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E96
+:E96 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP96 ;
+    :dataEMD "2020-05-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P97
+:P97 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "helena.mayo@vitoria.name" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Bend" ;
+    :nome "Helena Mayo" .
+    
+    :MM14 :temExame :E97 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P97 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E97
+:E97 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP97 ;
+    :dataEMD "2020-10-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P98
+:P98 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "martin.brewer@acrroriz.us" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Taycheedah" ;
+    :nome "Martin Brewer" .
+    
+    :MM4 :temExame :E98 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P98 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E98
+:E98 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP98 ;
+    :dataEMD "2021-05-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P99
+:P99 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "wilder.greene@vitoria.com" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Heil" ;
+    :nome "Wilder Greene" .
+    
+    :MM2 :temExame :E99 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P99 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E99
+:E99 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP99 ;
+    :dataEMD "2019-10-13" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P100
+:P100 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "harrison.finch@edviana.us" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Harrison" ;
+    :nome "Harrison Finch" .
+    
+    :MM7 :temExame :E100 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P100 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E100
+:E100 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP100 ;
+    :dataEMD "2019-06-23" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P101
+:P101 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jordan.alvarez@edviana.biz" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Riviera" ;
+    :nome "Jordan Alvarez" .
+    
+    :MM9 :temExame :E101 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P101 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E101
+:E101 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP101 ;
+    :dataEMD "2019-01-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P102
+:P102 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lane.norton@abcbraga.io" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Homestead" ;
+    :nome "Lane Norton" .
+    
+    :MM4 :temExame :E102 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P102 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E102
+:E102 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP102 ;
+    :dataEMD "2020-04-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P103
+:P103 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "carrillo.munoz@scbraga.biz" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Bordelonville" ;
+    :nome "Carrillo Munoz" .
+    
+    :MM7 :temExame :E103 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P103 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E103
+:E103 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP103 ;
+    :dataEMD "2020-07-06" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P104
+:P104 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "barrett.frederick@avcfamalicão.net" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Stollings" ;
+    :nome "Barrett Frederick" .
+    
+    :MM8 :temExame :E104 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P104 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E104
+:E104 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP104 ;
+    :dataEMD "2020-06-18" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P105
+:P105 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "harmon.stone@amigosmontanha.com" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Idledale" ;
+    :nome "Harmon Stone" .
+    
+    :MM2 :temExame :E105 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P105 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E105
+:E105 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP105 ;
+    :dataEMD "2019-06-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P106
+:P106 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "chandra.potts@amigosmontanha.tv" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Albany" ;
+    :nome "Chandra Potts" .
+    
+    :MM4 :temExame :E106 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P106 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E106
+:E106 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP106 ;
+    :dataEMD "2021-01-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P107
+:P107 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "john.warner@clube de orientação do minho.co.uk" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Veyo" ;
+    :nome "John Warner" .
+    
+    :MM2 :temExame :E107 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P107 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E107
+:E107 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP107 ;
+    :dataEMD "2021-01-12" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P108
+:P108 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "casey.bowman@abcbraga.ca" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Tryon" ;
+    :nome "Casey Bowman" .
+    
+    :MM4 :temExame :E108 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P108 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E108
+:E108 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP108 ;
+    :dataEMD "2019-03-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P109
+:P109 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mccullough.pena@clube de orientação do minho.name" ;
+    :género "M" ;
+    :idade 27 ;
+    :morada "Sunwest" ;
+    :nome "Mccullough Pena" .
+    
+    :MM1 :temExame :E109 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P109 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E109
+:E109 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP109 ;
+    :dataEMD "2020-04-23" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P110
+:P110 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "brianna.bentley@acdrcrespos.org" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Ypsilanti" ;
+    :nome "Brianna Bentley" .
+    
+    :MM1 :temExame :E110 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P110 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E110
+:E110 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP110 ;
+    :dataEMD "2019-06-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P111
+:P111 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "nixon.hendrix@avcfamalicão.info" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Bethpage" ;
+    :nome "Nixon Hendrix" .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#M16
+:M16 rdf:type owl:NamedIndividual ,
+             :Modalidade ;
+    :temExame :E111 ;
+    :éPraticadaEm :C1 ;
+    :éPraticadaPor :P111 ;
+    :nome "Ténis" .
+        
+###  http://rpcw.di.uminho.pt/2025/EMD#E111
+:E111 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP111 ;
+    :dataEMD "2021-02-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P112
+:P112 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "buckner.luna@edviana.us" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Veguita" ;
+    :nome "Buckner Luna" .
+    
+    :MM7 :temExame :E112 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P112 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E112
+:E112 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP112 ;
+    :dataEMD "2019-07-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P113
+:P113 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "britt.zamora@clube de orientação do minho.biz" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Rutherford" ;
+    :nome "Britt Zamora" .
+    
+    :MM16 :temExame :E113 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P113 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E113
+:E113 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP113 ;
+    :dataEMD "2019-08-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P114
+:P114 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hendrix.bauer@scbraga.io" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Ryderwood" ;
+    :nome "Hendrix Bauer" .
+    
+    :MM12 :temExame :E114 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P114 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E114
+:E114 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP114 ;
+    :dataEMD "2020-11-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P115
+:P115 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "travis.sampson@edviana.biz" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Dotsero" ;
+    :nome "Travis Sampson" .
+    
+    :MM16 :temExame :E115 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P115 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E115
+:E115 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP115 ;
+    :dataEMD "2019-10-30" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P116
+:P116 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "darla.ware@gdgoma.net" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Villarreal" ;
+    :nome "Darla Ware" .
+    
+    :MM1 :temExame :E116 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P116 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E116
+:E116 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP116 ;
+    :dataEMD "2019-11-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P117
+:P117 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "peters.vaughn@acrroriz.com" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Brandermill" ;
+    :nome "Peters Vaughn" .
+    
+    :MM16 :temExame :E117 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P117 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E117
+:E117 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP117 ;
+    :dataEMD "2020-01-17" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P118
+:P118 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lawrence.herman@gdgoma.tv" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Wakulla" ;
+    :nome "Lawrence Herman" .
+    
+    :MM0 :temExame :E118 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P118 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E118
+:E118 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP118 ;
+    :dataEMD "2020-10-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P119
+:P119 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "chang.oneill@edviana.co.uk" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Falconaire" ;
+    :nome "Chang Oneill" .
+    
+    :MM1 :temExame :E119 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P119 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E119
+:E119 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP119 ;
+    :dataEMD "2019-07-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P120
+:P120 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "patrick.mcintyre@edviana.ca" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Emory" ;
+    :nome "Patrick Mcintyre" .
+    
+    :MM8 :temExame :E120 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P120 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E120
+:E120 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP120 ;
+    :dataEMD "2020-12-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P121
+:P121 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "joyce.evans@amigosmontanha.name" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Rivers" ;
+    :nome "Joyce Evans" .
+    
+    :MM14 :temExame :E121 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P121 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E121
+:E121 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP121 ;
+    :dataEMD "2020-01-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P122
+:P122 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "larsen.villarreal@scbraga.org" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Dawn" ;
+    :nome "Larsen Villarreal" .
+    
+    :MM1 :temExame :E122 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P122 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E122
+:E122 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP122 ;
+    :dataEMD "2019-07-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P123
+:P123 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "morrow.yang@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Tibbie" ;
+    :nome "Morrow Yang" .
+    
+    :MM11 :temExame :E123 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P123 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E123
+:E123 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP123 ;
+    :dataEMD "2020-03-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P124
+:P124 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "dunn.horn@clube de orientação do minho.us" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Ripley" ;
+    :nome "Dunn Horn" .
+    
+    :MM14 :temExame :E124 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P124 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E124
+:E124 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP124 ;
+    :dataEMD "2021-02-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P125
+:P125 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "viola.medina@edviana.biz" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Nipinnawasee" ;
+    :nome "Viola Medina" .
+    
+    :MM7 :temExame :E125 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P125 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E125
+:E125 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP125 ;
+    :dataEMD "2019-09-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P126
+:P126 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "valdez.barnes@acdrcrespos.io" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Islandia" ;
+    :nome "Valdez Barnes" .
+    
+    :MM5 :temExame :E126 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P126 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E126
+:E126 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP126 ;
+    :dataEMD "2021-05-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P127
+:P127 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sweet.gibbs@avcfamalicão.biz" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Stagecoach" ;
+    :nome "Sweet Gibbs" .
+    
+    :MM7 :temExame :E127 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P127 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E127
+:E127 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP127 ;
+    :dataEMD "2019-08-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P128
+:P128 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "addie.hayes@acrroriz.net" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Bennett" ;
+    :nome "Addie Hayes" .
+    
+    :MM16 :temExame :E128 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P128 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E128
+:E128 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP128 ;
+    :dataEMD "2019-07-17" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P129
+:P129 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "may.holt@amigosmontanha.com" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Springdale" ;
+    :nome "May Holt" .
+    
+    :MM10 :temExame :E129 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P129 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E129
+:E129 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP129 ;
+    :dataEMD "2021-04-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P130
+:P130 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "christensen.boyd@abcbraga.tv" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Wells" ;
+    :nome "Christensen Boyd" .
+    
+    :MM7 :temExame :E130 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P130 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E130
+:E130 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP130 ;
+    :dataEMD "2019-12-31" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P131
+:P131 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "workman.franks@amigosmontanha.co.uk" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Greenfields" ;
+    :nome "Workman Franks" .
+    
+    :MM14 :temExame :E131 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P131 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E131
+:E131 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP131 ;
+    :dataEMD "2019-03-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P132
+:P132 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lucile.underwood@avcfamalicão.ca" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Innsbrook" ;
+    :nome "Lucile Underwood" .
+    
+    :MM14 :temExame :E132 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P132 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E132
+:E132 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP132 ;
+    :dataEMD "2020-01-05" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P133
+:P133 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "heath.bishop@amigosmontanha.name" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Grantville" ;
+    :nome "Heath Bishop" .
+    
+    :MM7 :temExame :E133 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P133 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E133
+:E133 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP133 ;
+    :dataEMD "2019-08-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P134
+:P134 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "rosales.mejia@clube de orientação do minho.org" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Dale" ;
+    :nome "Rosales Mejia" .
+    
+    :MM2 :temExame :E134 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P134 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E134
+:E134 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP134 ;
+    :dataEMD "2019-04-12" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P135
+:P135 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ray.howe@vitoria.info" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Nicut" ;
+    :nome "Ray Howe" .
+    
+    :MM9 :temExame :E135 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P135 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E135
+:E135 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP135 ;
+    :dataEMD "2019-02-02" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P136
+:P136 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "suarez.campbell@acdrcrespos.us" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Hamilton" ;
+    :nome "Suarez Campbell" .
+    
+    :MM9 :temExame :E136 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P136 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E136
+:E136 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP136 ;
+    :dataEMD "2019-07-05" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P137
+:P137 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "shaffer.le@avcfamalicão.biz" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Shepardsville" ;
+    :nome "Shaffer Le" .
+    
+    :MM3 :temExame :E137 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P137 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E137
+:E137 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP137 ;
+    :dataEMD "2020-01-20" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P138
+:P138 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "justine.wise@avcfamalicão.io" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Hondah" ;
+    :nome "Justine Wise" .
+    
+    :MM3 :temExame :E138 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P138 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E138
+:E138 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP138 ;
+    :dataEMD "2019-02-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P139
+:P139 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "villarreal.tucker@avcfamalicão.biz" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Tecolotito" ;
+    :nome "Villarreal Tucker" .
+    
+    :MM1 :temExame :E139 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P139 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E139
+:E139 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP139 ;
+    :dataEMD "2019-10-14" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P140
+:P140 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "monica.neal@acrroriz.net" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Roberts" ;
+    :nome "Monica Neal" .
+    
+    :MM2 :temExame :E140 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P140 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E140
+:E140 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP140 ;
+    :dataEMD "2021-04-05" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P141
+:P141 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lloyd.dotson@abcbraga.com" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Winesburg" ;
+    :nome "Lloyd Dotson" .
+    
+    :MM4 :temExame :E141 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P141 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E141
+:E141 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP141 ;
+    :dataEMD "2019-05-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P142
+:P142 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mccray.barker@vitoria.tv" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Blairstown" ;
+    :nome "Mccray Barker" .
+    
+    :MM13 :temExame :E142 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P142 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E142
+:E142 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP142 ;
+    :dataEMD "2019-01-29" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P143
+:P143 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sellers.hunter@scbraga.co.uk" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Omar" ;
+    :nome "Sellers Hunter" .
+    
+    :MM5 :temExame :E143 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P143 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E143
+:E143 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP143 ;
+    :dataEMD "2019-02-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P144
+:P144 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cathryn.fletcher@clube de orientação do minho.ca" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Oasis" ;
+    :nome "Cathryn Fletcher" .
+    
+    :MM4 :temExame :E144 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P144 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E144
+:E144 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP144 ;
+    :dataEMD "2021-01-31" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P145
+:P145 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "dee.lowery@vitoria.name" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Rodman" ;
+    :nome "Dee Lowery" .
+    
+    :MM11 :temExame :E145 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P145 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E145
+:E145 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP145 ;
+    :dataEMD "2020-02-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P146
+:P146 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "freeman.wyatt@acrroriz.org" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Bentonville" ;
+    :nome "Freeman Wyatt" .
+    
+    :MM1 :temExame :E146 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P146 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E146
+:E146 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP146 ;
+    :dataEMD "2019-04-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P147
+:P147 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "guy.drake@abcbraga.info" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Helen" ;
+    :nome "Guy Drake" .
+    
+    :MM12 :temExame :E147 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P147 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E147
+:E147 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP147 ;
+    :dataEMD "2020-01-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P148
+:P148 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mendez.good@clube de orientação do minho.us" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Westmoreland" ;
+    :nome "Mendez Good" .
+    
+    :MM1 :temExame :E148 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P148 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E148
+:E148 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP148 ;
+    :dataEMD "2019-07-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P149
+:P149 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "burnett.hogan@acrroriz.biz" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Valmy" ;
+    :nome "Burnett Hogan" .
+    
+    :MM5 :temExame :E149 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P149 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E149
+:E149 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP149 ;
+    :dataEMD "2019-03-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P150
+:P150 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jamie.cherry@abcbraga.io" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Forbestown" ;
+    :nome "Jamie Cherry" .
+    
+    :MM0 :temExame :E150 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P150 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E150
+:E150 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP150 ;
+    :dataEMD "2020-08-03" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P151
+:P151 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bird.noble@acrroriz.biz" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Lafferty" ;
+    :nome "Bird Noble" .
+    
+    :MM12 :temExame :E151 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P151 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E151
+:E151 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP151 ;
+    :dataEMD "2019-09-06" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P152
+:P152 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "burgess.bradshaw@abcbraga.net" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Bluffview" ;
+    :nome "Burgess Bradshaw" .
+    
+    :MM4 :temExame :E152 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P152 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E152
+:E152 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP152 ;
+    :dataEMD "2020-08-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P153
+:P153 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "laura.jacobson@acrroriz.com" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Kirk" ;
+    :nome "Laura Jacobson" .
+    
+    :MM5 :temExame :E153 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P153 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E153
+:E153 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP153 ;
+    :dataEMD "2020-10-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P154
+:P154 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "blair.sherman@scbraga.tv" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Waukeenah" ;
+    :nome "Blair Sherman" .
+    
+    :MM2 :temExame :E154 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P154 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E154
+:E154 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP154 ;
+    :dataEMD "2020-09-06" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P155
+:P155 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bobbi.hawkins@scbraga.co.uk" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Takilma" ;
+    :nome "Bobbi Hawkins" .
+    
+    :MM7 :temExame :E155 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P155 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E155
+:E155 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP155 ;
+    :dataEMD "2020-09-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P156
+:P156 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "montoya.anthony@acrroriz.ca" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Clara" ;
+    :nome "Montoya Anthony" .
+    
+    :MM11 :temExame :E156 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P156 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E156
+:E156 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP156 ;
+    :dataEMD "2019-12-21" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P157
+:P157 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hooper.kirby@acrroriz.name" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Roosevelt" ;
+    :nome "Hooper Kirby" .
+    
+    :MM8 :temExame :E157 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P157 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E157
+:E157 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP157 ;
+    :dataEMD "2021-01-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P158
+:P158 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "wolfe.baird@avcfamalicão.org" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Faxon" ;
+    :nome "Wolfe Baird" .
+    
+    :MM7 :temExame :E158 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P158 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E158
+:E158 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP158 ;
+    :dataEMD "2020-12-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P159
+:P159 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lamb.graham@avcfamalicão.info" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Bluetown" ;
+    :nome "Lamb Graham" .
+    
+    :MM10 :temExame :E159 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P159 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E159
+:E159 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP159 ;
+    :dataEMD "2019-01-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P160
+:P160 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "valentine.fitzgerald@abcbraga.us" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Kersey" ;
+    :nome "Valentine Fitzgerald" .
+    
+    :MM8 :temExame :E160 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P160 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E160
+:E160 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP160 ;
+    :dataEMD "2021-04-22" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P161
+:P161 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "herminia.mooney@amigosmontanha.biz" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Matheny" ;
+    :nome "Herminia Mooney" .
+    
+    :MM14 :temExame :E161 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P161 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E161
+:E161 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP161 ;
+    :dataEMD "2020-06-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P162
+:P162 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "golden.hopkins@avcfamalicão.io" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Courtland" ;
+    :nome "Golden Hopkins" .
+    
+    :MM2 :temExame :E162 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P162 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E162
+:E162 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP162 ;
+    :dataEMD "2019-09-08" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P163
+:P163 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lancaster.andrews@vitoria.biz" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Longoria" ;
+    :nome "Lancaster Andrews" .
+    
+    :MM1 :temExame :E163 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P163 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E163
+:E163 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP163 ;
+    :dataEMD "2020-12-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P164
+:P164 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "elena.sullivan@clube de orientação do minho.net" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Leola" ;
+    :nome "Elena Sullivan" .
+    
+    :MM0 :temExame :E164 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P164 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E164
+:E164 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP164 ;
+    :dataEMD "2019-08-15" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P165
+:P165 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "deana.ramsey@acrroriz.com" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Gila" ;
+    :nome "Deana Ramsey" .
+    
+    :MM14 :temExame :E165 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P165 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E165
+:E165 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP165 ;
+    :dataEMD "2020-04-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P166
+:P166 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mayra.rose@acdrcrespos.tv" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Calpine" ;
+    :nome "Mayra Rose" .
+    
+    :MM4 :temExame :E166 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P166 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E166
+:E166 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP166 ;
+    :dataEMD "2019-12-01" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P167
+:P167 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tina.salinas@vitoria.co.uk" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Welda" ;
+    :nome "Tina Salinas" .
+    
+    :MM10 :temExame :E167 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P167 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E167
+:E167 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP167 ;
+    :dataEMD "2020-07-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P168
+:P168 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sheila.caldwell@avcfamalicão.ca" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Leroy" ;
+    :nome "Sheila Caldwell" .
+    
+    :MM1 :temExame :E168 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P168 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E168
+:E168 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP168 ;
+    :dataEMD "2020-05-24" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P169
+:P169 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hudson.duffy@edviana.name" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Whitestone" ;
+    :nome "Hudson Duffy" .
+    
+    :MM6 :temExame :E169 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P169 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E169
+:E169 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP169 ;
+    :dataEMD "2020-01-02" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P170
+:P170 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "guzman.douglas@abcbraga.org" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Alderpoint" ;
+    :nome "Guzman Douglas" .
+    
+    :MM6 :temExame :E170 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P170 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E170
+:E170 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP170 ;
+    :dataEMD "2021-04-22" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P171
+:P171 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ethel.bartlett@acrroriz.info" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Muir" ;
+    :nome "Ethel Bartlett" .
+    
+    :MM6 :temExame :E171 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P171 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E171
+:E171 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP171 ;
+    :dataEMD "2019-12-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P172
+:P172 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "doyle.odom@amigosmontanha.us" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Newry" ;
+    :nome "Doyle Odom" .
+    
+    :MM7 :temExame :E172 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P172 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E172
+:E172 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP172 ;
+    :dataEMD "2021-04-13" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P173
+:P173 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "araceli.castaneda@avcfamalicão.biz" ;
+    :género "F" ;
+    :idade 28 ;
+    :morada "Magnolia" ;
+    :nome "Araceli Castaneda" .
+    
+    :MM3 :temExame :E173 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P173 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E173
+:E173 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP173 ;
+    :dataEMD "2020-06-02" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P174
+:P174 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "fuentes.walker@scbraga.io" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Leming" ;
+    :nome "Fuentes Walker" .
+    
+    :MM9 :temExame :E174 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P174 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E174
+:E174 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP174 ;
+    :dataEMD "2020-06-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P175
+:P175 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sarah.moore@acdrcrespos.biz" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Morgandale" ;
+    :nome "Sarah Moore" .
+    
+    :MM11 :temExame :E175 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P175 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E175
+:E175 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP175 ;
+    :dataEMD "2019-01-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P176
+:P176 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cheryl.watson@gdgoma.net" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Fairview" ;
+    :nome "Cheryl Watson" .
+    
+    :MM6 :temExame :E176 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P176 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E176
+:E176 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP176 ;
+    :dataEMD "2019-10-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P177
+:P177 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "langley.velez@acrroriz.com" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Neahkahnie" ;
+    :nome "Langley Velez" .
+    
+    :MM14 :temExame :E177 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P177 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E177
+:E177 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP177 ;
+    :dataEMD "2019-04-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P178
+:P178 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "alisa.morrison@gdgoma.tv" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Kiskimere" ;
+    :nome "Alisa Morrison" .
+    
+    :MM0 :temExame :E178 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P178 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E178
+:E178 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP178 ;
+    :dataEMD "2019-06-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P179
+:P179 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "malinda.merritt@abcbraga.co.uk" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Cecilia" ;
+    :nome "Malinda Merritt" .
+    
+    :MM3 :temExame :E179 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P179 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E179
+:E179 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP179 ;
+    :dataEMD "2019-12-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P180
+:P180 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lenora.kane@abcbraga.ca" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Axis" ;
+    :nome "Lenora Kane" .
+    
+    :MM1 :temExame :E180 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P180 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E180
+:E180 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP180 ;
+    :dataEMD "2020-07-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P181
+:P181 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cabrera.curtis@avcfamalicão.name" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Beechmont" ;
+    :nome "Cabrera Curtis" .
+    
+    :MM0 :temExame :E181 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P181 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E181
+:E181 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP181 ;
+    :dataEMD "2021-02-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P182
+:P182 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "roseann.benjamin@abcbraga.org" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Stewart" ;
+    :nome "Roseann Benjamin" .
+    
+    :MM8 :temExame :E182 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P182 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E182
+:E182 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP182 ;
+    :dataEMD "2020-05-28" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P183
+:P183 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "stafford.ray@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Zeba" ;
+    :nome "Stafford Ray" .
+    
+    :MM5 :temExame :E183 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P183 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E183
+:E183 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP183 ;
+    :dataEMD "2020-04-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P184
+:P184 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jewel.trevino@acrroriz.us" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Garnet" ;
+    :nome "Jewel Trevino" .
+    
+    :MM4 :temExame :E184 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P184 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E184
+:E184 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP184 ;
+    :dataEMD "2019-09-18" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P185
+:P185 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mckenzie.woods@acrroriz.biz" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Craig" ;
+    :nome "Mckenzie Woods" .
+    
+    :MM16 :temExame :E185 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P185 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E185
+:E185 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP185 ;
+    :dataEMD "2020-09-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P186
+:P186 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jean.conley@gdgoma.io" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Tilleda" ;
+    :nome "Jean Conley" .
+    
+    :MM1 :temExame :E186 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P186 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E186
+:E186 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP186 ;
+    :dataEMD "2020-12-10" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P187
+:P187 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "conway.alexander@scbraga.biz" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Darrtown" ;
+    :nome "Conway Alexander" .
+    
+    :MM8 :temExame :E187 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P187 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E187
+:E187 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP187 ;
+    :dataEMD "2020-09-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P188
+:P188 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "maryann.joyce@acdrcrespos.net" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Harmon" ;
+    :nome "Maryann Joyce" .
+    
+    :MM14 :temExame :E188 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P188 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E188
+:E188 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP188 ;
+    :dataEMD "2020-04-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P189
+:P189 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ayers.carroll@gdgoma.com" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Sylvanite" ;
+    :nome "Ayers Carroll" .
+    
+    :MM3 :temExame :E189 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P189 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E189
+:E189 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP189 ;
+    :dataEMD "2019-07-31" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P190
+:P190 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bonita.mccormick@gdgoma.tv" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Marshall" ;
+    :nome "Bonita Mccormick" .
+    
+    :MM7 :temExame :E190 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P190 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E190
+:E190 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP190 ;
+    :dataEMD "2019-01-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P191
+:P191 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kathy.kramer@edviana.co.uk" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Williams" ;
+    :nome "Kathy Kramer" .
+    
+    :MM12 :temExame :E191 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P191 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E191
+:E191 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP191 ;
+    :dataEMD "2019-04-28" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P192
+:P192 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tonia.bryan@edviana.ca" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Corinne" ;
+    :nome "Tonia Bryan" .
+    
+    :MM11 :temExame :E192 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P192 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E192
+:E192 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP192 ;
+    :dataEMD "2020-10-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P193
+:P193 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "barker.mercer@avcfamalicão.name" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Grayhawk" ;
+    :nome "Barker Mercer" .
+    
+    :MM1 :temExame :E193 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P193 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E193
+:E193 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP193 ;
+    :dataEMD "2020-02-02" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P194
+:P194 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mcfarland.tyson@amigosmontanha.org" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Kula" ;
+    :nome "Mcfarland Tyson" .
+    
+    :MM15 :temExame :E194 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P194 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E194
+:E194 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP194 ;
+    :dataEMD "2019-05-19" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P195
+:P195 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "meagan.carter@scbraga.info" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Martinsville" ;
+    :nome "Meagan Carter" .
+    
+    :MM10 :temExame :E195 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P195 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E195
+:E195 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP195 ;
+    :dataEMD "2021-02-19" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P196
+:P196 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "catalina.webb@abcbraga.us" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Aurora" ;
+    :nome "Catalina Webb" .
+    
+    :MM0 :temExame :E196 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P196 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E196
+:E196 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP196 ;
+    :dataEMD "2019-06-25" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P197
+:P197 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "moses.sargent@abcbraga.biz" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Wildwood" ;
+    :nome "Moses Sargent" .
+    
+    :MM7 :temExame :E197 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P197 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E197
+:E197 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP197 ;
+    :dataEMD "2020-10-31" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P198
+:P198 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "preston.mccall@avcfamalicão.io" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Mathews" ;
+    :nome "Preston Mccall" .
+    
+    :MM12 :temExame :E198 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P198 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E198
+:E198 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP198 ;
+    :dataEMD "2021-02-19" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P199
+:P199 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "christian.clements@acdrcrespos.biz" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Cochranville" ;
+    :nome "Christian Clements" .
+    
+    :MM9 :temExame :E199 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P199 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E199
+:E199 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP199 ;
+    :dataEMD "2019-06-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P200
+:P200 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jeanine.hester@avcfamalicão.name" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Baden" ;
+    :nome "Jeanine Hester" .
+    
+    :MM4 :temExame :E200 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P200 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E200
+:E200 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP200 ;
+    :dataEMD "2020-08-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P201
+:P201 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tonia.espinoza@avcfamalicão.ca" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Fillmore" ;
+    :nome "Tonia Espinoza" .
+    
+    :MM14 :temExame :E201 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P201 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E201
+:E201 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP201 ;
+    :dataEMD "2020-08-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P202
+:P202 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "alyssa.howard@scbraga.info" ;
+    :género "F" ;
+    :idade 26 ;
+    :morada "Conestoga" ;
+    :nome "Alyssa Howard" .
+    
+    :MM10 :temExame :E202 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P202 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E202
+:E202 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP202 ;
+    :dataEMD "2019-08-25" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P203
+:P203 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "merrill.fulton@amigosmontanha.org" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Berlin" ;
+    :nome "Merrill Fulton" .
+    
+    :MM2 :temExame :E203 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P203 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E203
+:E203 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP203 ;
+    :dataEMD "2020-06-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P204
+:P204 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jaime.erickson@abcbraga.co.uk" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Yardville" ;
+    :nome "Jaime Erickson" .
+    
+    :MM13 :temExame :E204 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P204 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E204
+:E204 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP204 ;
+    :dataEMD "2020-11-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P205
+:P205 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "felicia.skinner@acdrcrespos.biz" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Rosburg" ;
+    :nome "Felicia Skinner" .
+    
+    :MM0 :temExame :E205 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P205 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E205
+:E205 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP205 ;
+    :dataEMD "2019-09-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P206
+:P206 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "margaret.bray@clube de orientação do minho.biz" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Sardis" ;
+    :nome "Margaret Bray" .
+    
+    :MM12 :temExame :E206 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P206 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E206
+:E206 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP206 ;
+    :dataEMD "2020-07-12" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P207
+:P207 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "etta.cotton@avcfamalicão.us" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Graniteville" ;
+    :nome "Etta Cotton" .
+    
+    :MM10 :temExame :E207 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P207 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E207
+:E207 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP207 ;
+    :dataEMD "2021-03-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P208
+:P208 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kelley.davidson@avcfamalicão.com" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Ruckersville" ;
+    :nome "Kelley Davidson" .
+    
+    :MM15 :temExame :E208 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P208 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E208
+:E208 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP208 ;
+    :dataEMD "2020-10-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P209
+:P209 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "crawford.merritt@scbraga.net" ;
+    :género "M" ;
+    :idade 27 ;
+    :morada "Roy" ;
+    :nome "Crawford Merritt" .
+    
+    :MM3 :temExame :E209 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P209 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E209
+:E209 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP209 ;
+    :dataEMD "2019-08-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P210
+:P210 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kim.buck@avcfamalicão.tv" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Rosine" ;
+    :nome "Kim Buck" .
+    
+    :MM2 :temExame :E210 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P210 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E210
+:E210 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP210 ;
+    :dataEMD "2020-11-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P211
+:P211 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "gilda.schmidt@scbraga.me" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Enoree" ;
+    :nome "Gilda Schmidt" .
+    
+    :MM13 :temExame :E211 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P211 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E211
+:E211 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP211 ;
+    :dataEMD "2019-07-01" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P212
+:P212 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mcintosh.aguirre@vitoria.name" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Emory" ;
+    :nome "Mcintosh Aguirre" .
+    
+    :MM11 :temExame :E212 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P212 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E212
+:E212 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP212 ;
+    :dataEMD "2019-04-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P213
+:P213 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ida.bradshaw@clube de orientação do minho.ca" ;
+    :género "F" ;
+    :idade 21 ;
+    :morada "Lowgap" ;
+    :nome "Ida Bradshaw" .
+    
+    :MM13 :temExame :E213 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P213 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E213
+:E213 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP213 ;
+    :dataEMD "2020-11-25" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P214
+:P214 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jefferson.pacheco@edviana.info" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Strykersville" ;
+    :nome "Jefferson Pacheco" .
+    
+    :MM13 :temExame :E214 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P214 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E214
+:E214 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP214 ;
+    :dataEMD "2020-04-08" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P215
+:P215 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "olson.hickman@acrroriz.org" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Madrid" ;
+    :nome "Olson Hickman" .
+    
+    :MM15 :temExame :E215 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P215 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E215
+:E215 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP215 ;
+    :dataEMD "2020-12-14" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P216
+:P216 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "malinda.mccall@scbraga.co.uk" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Winchester" ;
+    :nome "Malinda Mccall" .
+    
+    :MM0 :temExame :E216 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P216 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E216
+:E216 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP216 ;
+    :dataEMD "2020-06-09" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P217
+:P217 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "raquel.dejesus@acrroriz.biz" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Greenfields" ;
+    :nome "Raquel Dejesus" .
+    
+    :MM1 :temExame :E217 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P217 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E217
+:E217 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP217 ;
+    :dataEMD "2020-10-06" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P218
+:P218 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "daniel.chambers@gdgoma.biz" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Nicholson" ;
+    :nome "Daniel Chambers" .
+    
+    :MM4 :temExame :E218 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P218 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E218
+:E218 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP218 ;
+    :dataEMD "2020-02-06" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P219
+:P219 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "samantha.sharp@acrroriz.us" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Elliott" ;
+    :nome "Samantha Sharp" .
+    
+    :MM1 :temExame :E219 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P219 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E219
+:E219 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP219 ;
+    :dataEMD "2019-12-21" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P220
+:P220 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "robert.herman@clube de orientação do minho.com" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Weogufka" ;
+    :nome "Robert Herman" .
+    
+    :MM11 :temExame :E220 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P220 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E220
+:E220 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP220 ;
+    :dataEMD "2021-01-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P221
+:P221 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "olive.chapman@avcfamalicão.net" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Wikieup" ;
+    :nome "Olive Chapman" .
+    
+    :MM13 :temExame :E221 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P221 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E221
+:E221 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP221 ;
+    :dataEMD "2021-02-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P222
+:P222 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mccoy.blackburn@amigosmontanha.tv" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Osmond" ;
+    :nome "Mccoy Blackburn" .
+    
+    :MM10 :temExame :E222 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P222 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E222
+:E222 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP222 ;
+    :dataEMD "2019-04-30" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P223
+:P223 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lambert.ferrell@vitoria.me" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Rowe" ;
+    :nome "Lambert Ferrell" .
+    
+    :MM10 :temExame :E223 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P223 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E223
+:E223 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP223 ;
+    :dataEMD "2020-12-10" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P224
+:P224 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "small.coffey@vitoria.name" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Waumandee" ;
+    :nome "Small Coffey" .
+    
+    :MM13 :temExame :E224 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P224 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E224
+:E224 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP224 ;
+    :dataEMD "2019-03-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P225
+:P225 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hicks.daniels@abcbraga.ca" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Frizzleburg" ;
+    :nome "Hicks Daniels" .
+    
+    :MM3 :temExame :E225 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P225 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E225
+:E225 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP225 ;
+    :dataEMD "2019-05-03" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P226
+:P226 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "meghan.cabrera@edviana.info" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Shawmut" ;
+    :nome "Meghan Cabrera" .
+    
+    :MM14 :temExame :E226 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P226 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E226
+:E226 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP226 ;
+    :dataEMD "2019-03-23" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P227
+:P227 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hubbard.hart@gdgoma.org" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Trucksville" ;
+    :nome "Hubbard Hart" .
+    
+    :MM7 :temExame :E227 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P227 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E227
+:E227 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP227 ;
+    :dataEMD "2019-01-12" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P228
+:P228 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "chelsea.gallegos@avcfamalicão.co.uk" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Warren" ;
+    :nome "Chelsea Gallegos" .
+    
+    :MM14 :temExame :E228 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P228 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E228
+:E228 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP228 ;
+    :dataEMD "2020-07-25" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P229
+:P229 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "natalie.figueroa@clube de orientação do minho.biz" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Jugtown" ;
+    :nome "Natalie Figueroa" .
+    
+    :MM7 :temExame :E229 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P229 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E229
+:E229 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP229 ;
+    :dataEMD "2020-03-16" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P230
+:P230 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hayes.ward@edviana.biz" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Accoville" ;
+    :nome "Hayes Ward" .
+    
+    :MM0 :temExame :E230 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P230 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E230
+:E230 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP230 ;
+    :dataEMD "2020-11-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P231
+:P231 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "graves.mccray@abcbraga.us" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Kipp" ;
+    :nome "Graves Mccray" .
+    
+    :MM7 :temExame :E231 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P231 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E231
+:E231 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP231 ;
+    :dataEMD "2019-10-13" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P232
+:P232 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mavis.riley@amigosmontanha.com" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Nescatunga" ;
+    :nome "Mavis Riley" .
+    
+    :MM12 :temExame :E232 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P232 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E232
+:E232 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP232 ;
+    :dataEMD "2020-09-27" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P233
+:P233 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "salas.joseph@amigosmontanha.net" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Greenwich" ;
+    :nome "Salas Joseph" .
+    
+    :MM5 :temExame :E233 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P233 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E233
+:E233 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP233 ;
+    :dataEMD "2019-09-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P234
+:P234 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "carly.peck@edviana.tv" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Byrnedale" ;
+    :nome "Carly Peck" .
+    
+    :MM0 :temExame :E234 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P234 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E234
+:E234 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP234 ;
+    :dataEMD "2020-10-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P235
+:P235 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "ramirez.blevins@vitoria.me" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Bluetown" ;
+    :nome "Ramirez Blevins" .
+    
+    :MM6 :temExame :E235 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P235 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E235
+:E235 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP235 ;
+    :dataEMD "2019-02-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P236
+:P236 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "parks.saunders@clube de orientação do minho.name" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Sheatown" ;
+    :nome "Parks Saunders" .
+    
+    :MM6 :temExame :E236 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P236 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E236
+:E236 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP236 ;
+    :dataEMD "2020-12-31" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P237
+:P237 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "leanne.armstrong@amigosmontanha.ca" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Cochranville" ;
+    :nome "Leanne Armstrong" .
+    
+    :MM0 :temExame :E237 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P237 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E237
+:E237 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP237 ;
+    :dataEMD "2021-01-13" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P238
+:P238 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kline.stark@avcfamalicão.info" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Tedrow" ;
+    :nome "Kline Stark" .
+    
+    :MM15 :temExame :E238 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P238 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E238
+:E238 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP238 ;
+    :dataEMD "2020-03-22" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P239
+:P239 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "elliott.guzman@clube de orientação do minho.org" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Rutherford" ;
+    :nome "Elliott Guzman" .
+    
+    :MM13 :temExame :E239 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P239 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E239
+:E239 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP239 ;
+    :dataEMD "2019-02-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P240
+:P240 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "liz.baldwin@abcbraga.co.uk" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Basye" ;
+    :nome "Liz Baldwin" .
+    
+    :MM6 :temExame :E240 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P240 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E240
+:E240 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP240 ;
+    :dataEMD "2019-08-06" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P241
+:P241 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "warner.bullock@gdgoma.biz" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Valle" ;
+    :nome "Warner Bullock" .
+    
+    :MM5 :temExame :E241 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P241 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E241
+:E241 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP241 ;
+    :dataEMD "2020-10-16" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P242
+:P242 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "santana.harper@scbraga.biz" ;
+    :género "F" ;
+    :idade 32 ;
+    :morada "Malo" ;
+    :nome "Santana Harper" .
+    
+    :MM0 :temExame :E242 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P242 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E242
+:E242 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP242 ;
+    :dataEMD "2019-12-18" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P243
+:P243 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "imelda.odonnell@avcfamalicão.us" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Riviera" ;
+    :nome "Imelda Odonnell" .
+    
+    :MM9 :temExame :E243 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P243 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E243
+:E243 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP243 ;
+    :dataEMD "2019-01-18" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P244
+:P244 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lila.curry@amigosmontanha.com" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Alden" ;
+    :nome "Lila Curry" .
+    
+    :MM0 :temExame :E244 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P244 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E244
+:E244 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP244 ;
+    :dataEMD "2020-09-24" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P245
+:P245 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "milagros.ellis@acdrcrespos.net" ;
+    :género "M" ;
+    :idade 21 ;
+    :morada "Why" ;
+    :nome "Milagros Ellis" .
+    
+    :MM4 :temExame :E245 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P245 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E245
+:E245 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP245 ;
+    :dataEMD "2020-02-06" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P246
+:P246 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "stafford.hale@acdrcrespos.tv" ;
+    :género "F" ;
+    :idade 29 ;
+    :morada "Bowden" ;
+    :nome "Stafford Hale" .
+    
+    :MM13 :temExame :E246 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P246 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E246
+:E246 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP246 ;
+    :dataEMD "2019-07-15" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P247
+:P247 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "blevins.cline@clube de orientação do minho.me" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Delshire" ;
+    :nome "Blevins Cline" .
+    
+    :MM1 :temExame :E247 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P247 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E247
+:E247 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP247 ;
+    :dataEMD "2021-05-05" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P248
+:P248 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "marisol.owen@acdrcrespos.name" ;
+    :género "M" ;
+    :idade 23 ;
+    :morada "Soham" ;
+    :nome "Marisol Owen" .
+    
+    :MM5 :temExame :E248 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P248 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E248
+:E248 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP248 ;
+    :dataEMD "2020-07-15" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P249
+:P249 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mcintyre.walsh@abcbraga.ca" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Beechmont" ;
+    :nome "Mcintyre Walsh" .
+    
+    :MM9 :temExame :E249 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P249 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E249
+:E249 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP249 ;
+    :dataEMD "2020-07-02" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P250
+:P250 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "valarie.silva@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 25 ;
+    :morada "Lynn" ;
+    :nome "Valarie Silva" .
+    
+    :MM0 :temExame :E250 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P250 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E250
+:E250 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP250 ;
+    :dataEMD "2020-11-06" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P251
+:P251 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "jimmie.beck@avcfamalicão.org" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Walker" ;
+    :nome "Jimmie Beck" .
+    
+    :MM9 :temExame :E251 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P251 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E251
+:E251 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP251 ;
+    :dataEMD "2020-01-06" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P252
+:P252 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "amparo.price@acdrcrespos.co.uk" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Townsend" ;
+    :nome "Amparo Price" .
+    
+    :MM0 :temExame :E252 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P252 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E252
+:E252 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP252 ;
+    :dataEMD "2019-08-30" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P253
+:P253 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "susanna.lowery@edviana.biz" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Cawood" ;
+    :nome "Susanna Lowery" .
+    
+    :MM6 :temExame :E253 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P253 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E253
+:E253 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP253 ;
+    :dataEMD "2021-01-24" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P254
+:P254 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "flynn.huber@clube de orientação do minho.biz" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Teasdale" ;
+    :nome "Flynn Huber" .
+    
+    :MM9 :temExame :E254 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P254 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E254
+:E254 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP254 ;
+    :dataEMD "2020-08-23" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P255
+:P255 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "elaine.allen@acdrcrespos.us" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Kaka" ;
+    :nome "Elaine Allen" .
+    
+    :MM15 :temExame :E255 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P255 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E255
+:E255 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP255 ;
+    :dataEMD "2019-03-29" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P256
+:P256 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "gwen.pate@amigosmontanha.com" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Snelling" ;
+    :nome "Gwen Pate" .
+    
+    :MM12 :temExame :E256 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P256 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E256
+:E256 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP256 ;
+    :dataEMD "2020-09-24" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P257
+:P257 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "leila.solis@acrroriz.net" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Glenville" ;
+    :nome "Leila Solis" .
+    
+    :MM5 :temExame :E257 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P257 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E257
+:E257 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP257 ;
+    :dataEMD "2020-08-19" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P258
+:P258 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mercedes.heath@gdgoma.tv" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Chaparrito" ;
+    :nome "Mercedes Heath" .
+    
+    :MM13 :temExame :E258 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P258 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E258
+:E258 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP258 ;
+    :dataEMD "2021-04-17" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P259
+:P259 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "althea.fitzpatrick@edviana.me" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Marne" ;
+    :nome "Althea Fitzpatrick" .
+    
+    :MM11 :temExame :E259 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P259 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E259
+:E259 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP259 ;
+    :dataEMD "2019-05-03" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P260
+:P260 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "arlene.morton@vitoria.name" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Wiscon" ;
+    :nome "Arlene Morton" .
+    
+    :MM6 :temExame :E260 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P260 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E260
+:E260 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP260 ;
+    :dataEMD "2019-12-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P261
+:P261 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mosley.gonzales@scbraga.ca" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Driftwood" ;
+    :nome "Mosley Gonzales" .
+    
+    :MM8 :temExame :E261 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P261 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E261
+:E261 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP261 ;
+    :dataEMD "2020-09-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P262
+:P262 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "torres.hardy@clube de orientação do minho.info" ;
+    :género "F" ;
+    :idade 33 ;
+    :morada "Fairfield" ;
+    :nome "Torres Hardy" .
+    
+    :MM13 :temExame :E262 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P262 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E262
+:E262 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP262 ;
+    :dataEMD "2019-08-31" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P263
+:P263 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "annmarie.petersen@clube de orientação do minho.org" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Twilight" ;
+    :nome "Annmarie Petersen" .
+    
+    :MM13 :temExame :E263 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P263 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E263
+:E263 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP263 ;
+    :dataEMD "2020-12-13" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P264
+:P264 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "osborn.green@acrroriz.co.uk" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Jacksonwald" ;
+    :nome "Osborn Green" .
+    
+    :MM12 :temExame :E264 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P264 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E264
+:E264 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP264 ;
+    :dataEMD "2020-12-03" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P265
+:P265 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "davenport.dominguez@acrroriz.biz" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Vallonia" ;
+    :nome "Davenport Dominguez" .
+    
+    :MM4 :temExame :E265 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P265 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E265
+:E265 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP265 ;
+    :dataEMD "2020-08-26" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P266
+:P266 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "barton.massey@amigosmontanha.biz" ;
+    :género "M" ;
+    :idade 26 ;
+    :morada "Ribera" ;
+    :nome "Barton Massey" .
+    
+    :MM5 :temExame :E266 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P266 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E266
+:E266 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP266 ;
+    :dataEMD "2019-12-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P267
+:P267 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "holly.bowen@acdrcrespos.us" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Adamstown" ;
+    :nome "Holly Bowen" .
+    
+    :MM6 :temExame :E267 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P267 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E267
+:E267 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP267 ;
+    :dataEMD "2019-06-09" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P268
+:P268 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "dennis.crawford@amigosmontanha.com" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Wanship" ;
+    :nome "Dennis Crawford" .
+    
+    :MM9 :temExame :E268 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P268 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E268
+:E268 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP268 ;
+    :dataEMD "2020-06-28" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P269
+:P269 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "oliver.mcleod@scbraga.net" ;
+    :género "F" ;
+    :idade 25 ;
+    :morada "Garnet" ;
+    :nome "Oliver Mcleod" .
+    
+    :MM16 :temExame :E269 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P269 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E269
+:E269 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP269 ;
+    :dataEMD "2019-05-25" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P270
+:P270 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tameka.orr@vitoria.tv" ;
+    :género "F" ;
+    :idade 24 ;
+    :morada "Klagetoh" ;
+    :nome "Tameka Orr" .
+    
+    :MM3 :temExame :E270 ;
+                                         :éPraticadaEm :C7 ;
+                                         :éPraticadaPor :P270 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E270
+:E270 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP270 ;
+    :dataEMD "2019-03-01" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P271
+:P271 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "foster.strickland@clube de orientação do minho.me" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Holtville" ;
+    :nome "Foster Strickland" .
+    
+    :MM4 :temExame :E271 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P271 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E271
+:E271 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP271 ;
+    :dataEMD "2020-05-28" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P272
+:P272 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "marlene.rodgers@scbraga.name" ;
+    :género "F" ;
+    :idade 27 ;
+    :morada "Levant" ;
+    :nome "Marlene Rodgers" .
+    
+    :MM16 :temExame :E272 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P272 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E272
+:E272 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP272 ;
+    :dataEMD "2019-10-26" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P273
+:P273 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "shari.mathews@acdrcrespos.ca" ;
+    :género "M" ;
+    :idade 22 ;
+    :morada "Joes" ;
+    :nome "Shari Mathews" .
+    
+    :MM14 :temExame :E273 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P273 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E273
+:E273 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP273 ;
+    :dataEMD "2020-04-12" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P274
+:P274 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "josie.rasmussen@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 34 ;
+    :morada "Riverton" ;
+    :nome "Josie Rasmussen" .
+    
+    :MM2 :temExame :E274 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P274 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E274
+:E274 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP274 ;
+    :dataEMD "2021-05-07" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P275
+:P275 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "shelton.walton@edviana.org" ;
+    :género "M" ;
+    :idade 35 ;
+    :morada "Williston" ;
+    :nome "Shelton Walton" .
+    
+    :MM5 :temExame :E275 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P275 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E275
+:E275 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP275 ;
+    :dataEMD "2020-06-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P276
+:P276 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "odonnell.russell@gdgoma.co.uk" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Alderpoint" ;
+    :nome "Odonnell Russell" .
+    
+    :MM8 :temExame :E276 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P276 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E276
+:E276 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP276 ;
+    :dataEMD "2020-11-21" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P277
+:P277 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "elba.le@acrroriz.biz" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Ebro" ;
+    :nome "Elba Le" .
+    
+    :MM10 :temExame :E277 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P277 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E277
+:E277 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP277 ;
+    :dataEMD "2021-02-04" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P278
+:P278 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "sweet.woodward@gdgoma.biz" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Urie" ;
+    :nome "Sweet Woodward" .
+    
+    :MM15 :temExame :E278 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P278 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E278
+:E278 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP278 ;
+    :dataEMD "2019-10-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P279
+:P279 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "wilkins.cummings@acrroriz.us" ;
+    :género "M" ;
+    :idade 33 ;
+    :morada "Gila" ;
+    :nome "Wilkins Cummings" .
+    
+    :MM13 :temExame :E279 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P279 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E279
+:E279 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP279 ;
+    :dataEMD "2020-02-24" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P280
+:P280 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "rogers.noel@acdrcrespos.com" ;
+    :género "F" ;
+    :idade 35 ;
+    :morada "Cresaptown" ;
+    :nome "Rogers Noel" .
+    
+    :MM8 :temExame :E280 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P280 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E280
+:E280 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP280 ;
+    :dataEMD "2021-02-04" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P281
+:P281 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "hodges.ashley@abcbraga.net" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Crawfordsville" ;
+    :nome "Hodges Ashley" .
+    
+    :MM14 :temExame :E281 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P281 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E281
+:E281 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP281 ;
+    :dataEMD "2021-03-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P282
+:P282 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "curtis.dillon@amigosmontanha.tv" ;
+    :género "M" ;
+    :idade 29 ;
+    :morada "Beason" ;
+    :nome "Curtis Dillon" .
+    
+    :MM5 :temExame :E282 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P282 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E282
+:E282 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP282 ;
+    :dataEMD "2020-12-19" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P283
+:P283 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "lelia.oliver@gdgoma.me" ;
+    :género "M" ;
+    :idade 30 ;
+    :morada "Cedarville" ;
+    :nome "Lelia Oliver" .
+    
+    :MM16 :temExame :E283 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P283 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E283
+:E283 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP283 ;
+    :dataEMD "2021-02-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P284
+:P284 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "fuentes.rogers@scbraga.name" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Grazierville" ;
+    :nome "Fuentes Rogers" .
+    
+    :MM8 :temExame :E284 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P284 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E284
+:E284 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP284 ;
+    :dataEMD "2019-02-07" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P285
+:P285 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "carole.lindsey@amigosmontanha.ca" ;
+    :género "F" ;
+    :idade 34 ;
+    :morada "Weedville" ;
+    :nome "Carole Lindsey" .
+    
+    :MM6 :temExame :E285 ;
+                                         :éPraticadaEm :C8 ;
+                                         :éPraticadaPor :P285 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E285
+:E285 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP285 ;
+    :dataEMD "2020-05-28" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P286
+:P286 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "martinez.johns@abcbraga.info" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Hebron" ;
+    :nome "Martinez Johns" .
+    
+    :MM10 :temExame :E286 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P286 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E286
+:E286 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP286 ;
+    :dataEMD "2019-07-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P287
+:P287 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "kellie.holland@scbraga.org" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Bloomington" ;
+    :nome "Kellie Holland" .
+    
+    :MM15 :temExame :E287 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P287 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E287
+:E287 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP287 ;
+    :dataEMD "2020-07-21" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P288
+:P288 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "mathis.kirk@edviana.co.uk" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Klondike" ;
+    :nome "Mathis Kirk" .
+    
+    :MM0 :temExame :E288 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P288 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E288
+:E288 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP288 ;
+    :dataEMD "2019-06-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P289
+:P289 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bertha.shelton@gdgoma.biz" ;
+    :género "M" ;
+    :idade 28 ;
+    :morada "Sedley" ;
+    :nome "Bertha Shelton" .
+    
+    :MM6 :temExame :E289 ;
+                                         :éPraticadaEm :C0 ;
+                                         :éPraticadaPor :P289 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E289
+:E289 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP289 ;
+    :dataEMD "2019-10-22" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P290
+:P290 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "bonnie.diaz@scbraga.biz" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Gerton" ;
+    :nome "Bonnie Diaz" .
+    
+    :MM16 :temExame :E290 ;
+                                         :éPraticadaEm :C4 ;
+                                         :éPraticadaPor :P290 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E290
+:E290 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP290 ;
+    :dataEMD "2020-01-08" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P291
+:P291 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "becker.talley@clube de orientação do minho.us" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Valmy" ;
+    :nome "Becker Talley" .
+    
+    :MM0 :temExame :E291 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P291 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E291
+:E291 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP291 ;
+    :dataEMD "2020-08-23" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P292
+:P292 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "zelma.bell@clube de orientação do minho.com" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Shasta" ;
+    :nome "Zelma Bell" .
+    
+    :MM15 :temExame :E292 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P292 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E292
+:E292 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP292 ;
+    :dataEMD "2019-08-11" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P293
+:P293 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "stanton.cox@edviana.net" ;
+    :género "F" ;
+    :idade 22 ;
+    :morada "Foxworth" ;
+    :nome "Stanton Cox" .
+    
+    :MM8 :temExame :E293 ;
+                                         :éPraticadaEm :C9 ;
+                                         :éPraticadaPor :P293 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E293
+:E293 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP293 ;
+    :dataEMD "2019-09-29" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P294
+:P294 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "cindy.shepherd@avcfamalicão.tv" ;
+    :género "F" ;
+    :idade 23 ;
+    :morada "Brule" ;
+    :nome "Cindy Shepherd" .
+    
+    :MM3 :temExame :E294 ;
+                                         :éPraticadaEm :C1 ;
+                                         :éPraticadaPor :P294 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E294
+:E294 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP294 ;
+    :dataEMD "2020-07-15" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P295
+:P295 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "knapp.buckner@abcbraga.me" ;
+    :género "F" ;
+    :idade 31 ;
+    :morada "Rose" ;
+    :nome "Knapp Buckner" .
+    
+    :MM0 :temExame :E295 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P295 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E295
+:E295 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP295 ;
+    :dataEMD "2020-09-20" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P296
+:P296 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "callahan.mitchell@abcbraga.name" ;
+    :género "M" ;
+    :idade 24 ;
+    :morada "Wollochet" ;
+    :nome "Callahan Mitchell" .
+    
+    :MM5 :temExame :E296 ;
+                                         :éPraticadaEm :C2 ;
+                                         :éPraticadaPor :P296 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E296
+:E296 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP296 ;
+    :dataEMD "2020-11-27" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P297
+:P297 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "allie.lyons@acrroriz.ca" ;
+    :género "M" ;
+    :idade 31 ;
+    :morada "Welch" ;
+    :nome "Allie Lyons" .
+    
+    :MM15 :temExame :E297 ;
+                                         :éPraticadaEm :C6 ;
+                                         :éPraticadaPor :P297 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E297
+:E297 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP297 ;
+    :dataEMD "2021-01-10" ;
+    :resultado "false"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P298
+:P298 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "tammy.bryant@acdrcrespos.info" ;
+    :género "M" ;
+    :idade 32 ;
+    :morada "Fidelis" ;
+    :nome "Tammy Bryant" .
+    
+    :MM0 :temExame :E298 ;
+                                         :éPraticadaEm :C5 ;
+                                         :éPraticadaPor :P298 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E298
+:E298 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP298 ;
+    :dataEMD "2020-05-08" ;
+    :resultado "true"^^xsd:boolean .
+
+
+###  http://rpcw.di.uminho.pt/2025/EMD#P299
+:P299 rdf:type owl:NamedIndividual ,
+             :Pessoa ;
+    :email "carissa.rosario@clube de orientação do minho.org" ;
+    :género "F" ;
+    :idade 30 ;
+    :morada "Brookfield" ;
+    :nome "Carissa Rosario" .
+    
+    :MM7 :temExame :E299 ;
+                                         :éPraticadaEm :C3 ;
+                                         :éPraticadaPor :P299 .
+    
+###  http://rpcw.di.uminho.pt/2025/EMD#E299
+:E299 rdf:type owl:NamedIndividual ,
+             :Exame ;
+    :éRealizadoPor :PP299 ;
+    :dataEMD "2021-01-02" ;
+    :resultado "true"^^xsd:boolean .
+
+
