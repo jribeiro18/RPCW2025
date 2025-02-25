@@ -36,7 +36,7 @@ SELECT DISTINCT ?propriedade WHERE {
 
 ```
 PREFIX : <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
-SELECT (COUNT(?s) AS ?numReis) WHERE{
+SELECT (COUNT(DISTINCT ?s) AS ?numReis) WHERE{
     ?s a :Rei .
 }
 ```
@@ -57,13 +57,14 @@ SELECT ?nome ?nascimento ?cognomes WHERE {
 
 ```
 PREFIX : <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
-SELECT ?nome ?nascimento ?cognomes ?dinastia WHERE {
+SELECT ?nome ?nascimento ?cognomes ?dnome WHERE {
     ?s a :Rei .
     ?s :nome ?nome .
     ?s :nascimento ?nascimento .
     ?s :cognomes ?cognomes .
     ?s :temReinado ?reinado .
     ?reinado :dinastia ?dinastia .
+    ?dinastia :nome ?dnome
 }
 ```
 
@@ -71,7 +72,7 @@ SELECT ?nome ?nascimento ?cognomes ?dinastia WHERE {
 
 ```
 PREFIX : <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
-SELECT ?dinastia (COUNT(?s) AS ?numReis)
+SELECT ?dinastia (COUNT(DISTINCT ?s) AS ?numReis)
 WHERE {
     ?s a :Rei .
     ?s :temReinado ?reinado .
@@ -85,7 +86,7 @@ ORDER BY DESC(?numReis)
 
 ```
 PREFIX : <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
-SELECT DISTINCT ?descricao ?data WHERE{
+SELECT ?descricao ?data WHERE{
     ?s a :Descobrimento .
     ?s :data ?data .
     ?s :notas ?descricao .
@@ -110,12 +111,12 @@ SELECT ?nome ?data ?rei WHERE{
 
 ```
 PREFIX : <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
-SELECT ?nome ?dataNascimento ?mandato WHERE{
+SELECT ?nome ?dataNascimento (count(?mandato) as ?nmandato) WHERE{
     ?s a :Presidente .
     ?s :nome ?nome . 
     ?s :nascimento ?dataNascimento .
     ?s :mandato ?mandato .
-}
+}GROUP BY ?s ?nome ?dataNascimento
 ```
 
 ### 11 - Quantos mandatos teve o presidente Sidónio Pais? Em que datas começaram e terminaram esses mandatos?
@@ -159,7 +160,7 @@ SELECT ?nomePartido (COUNT(?militante) AS ?numMilitantes) WHERE {
     ?partido a :Partido .
     ?partido :nome ?nomePartido .
     ?partido :temMilitante ?militante .
-}GROUP BY (?nome)
+}GROUP BY (?nomePartido)
 ORDER BY DESC (?numMilitantes)
 LIMIT 1 
 ```
