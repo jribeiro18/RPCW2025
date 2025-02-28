@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer Result</title>
+</head>
+<body>
+    <h1>{{ 'Correct!' if correct else 'Wrong Answer!' }}</h1>
+    <p>The correct answer was: <strong>{{ correct_answer }}</strong></p>
+    <p>Your current score: {{ score }}</p>
+    <!-- 
+    This anchor tag generates a link to the next question, which is chosen randomly between two options:
+    - If `random_choice` is 'quiz', the link will point to '/quiz'.
+    - Otherwise, the link will point to '/truefalse'.
+    -->
+    <a href="/tipoPergunta">Next Question</a> | <a href="/score">Finish Quiz</a>
+</body>
+</html>

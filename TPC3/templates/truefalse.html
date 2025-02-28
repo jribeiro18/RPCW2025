@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>True or False Quiz</title>
+</head>
+<body>
+    <h1>True or False Quiz</h1>
+    <p>Score: {{ session.get('score', 0) }}</p>
+    <form method="POST" action="/truefalse">
+        <p><strong>{{ question.question }}</strong></p>
+        <label>
+            <input type="radio" name="answer" value="True" required>
+            True
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="False" required>
+            False
+        </label><br>
+        <input type="hidden" name="answerCorrect" value="{{ question.answer }}"/>
+        <button type="submit">Submit Answer</button>
+    </form>
+</body>
+</html>

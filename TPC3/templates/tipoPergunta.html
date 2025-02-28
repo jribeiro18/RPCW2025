@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Question Type</title>
+</head>
+<body>
+    <h1>Select Question Type</h1>
+    <p>Score: {{ session.get('score', 0) }}</p>
+    <form method="POST" action="/tipoPergunta">
+        <button type="submit" name="tipo" value="quiz">Multiple Choice</button>
+        <button type="submit" name="tipo" value="truefalse">True or False</button>
+    </form>
+</body>
+</html>
