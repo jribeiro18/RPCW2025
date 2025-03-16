@@ -1,0 +1,253 @@
+{
+    "movies": {
+        "http://dbpedia.org/resource/Muhammad:_The_Last_Prophet": {
+            "title": "Muhammad: The Last Prophet",
+            "country": "United States",
+            "director": "http://dbpedia.org/resource/Richard_Rich_(filmmaker)",
+            "actors": [
+                "Nicholas Kadi"
+            ],
+            "genres": [],
+            "designacao": "Muhammad: The Last Prophet is a 2002 American animated religious epic film, produced by Badr International and directed by Richard Rich. The movie was released in limited cinemas in the United States and the United Kingdom. The film focuses on the early days of Islam and Muhammad. In accordance with Islamic law and tradition, Muhammad and the first four caliphs (Abu Bakr, Umar, Uthman, and Ali) are not depicted in the film or any of its prequels. Scenes that include Muhammad are shown from his perspective, with his words paraphrased by the narrator. The film has been approved by the Council of Al-Azhar Al-Shareef (Islamic Research Academy in Egypt) and the Supreme Islamic Shiite Council of Lebanon. Some characters, such as the main character Malek and the rest of his family, are fictional. The film has been dubbed into several languages including Arabic, French, Turkish and Malay. The dialogue of the Arabic version differs from the English version of the film, and the dialogue of the Arabic version is more consistent and similar with traditional Islamic historical narratives."
+        },
+        "http://dbpedia.org/resource/An_American_Haunting": {
+            "title": "An American Haunting",
+            "country": "United States",
+            "director": "http://dbpedia.org/resource/Courtney_Solomon",
+            "actors": [
+                "Donald Sutherland",
+                "James D'Arcy",
+                "Sissy Spacek"
+            ],
+            "genres": [],
+            "designacao": "《아메리칸 헌팅》(An American Haunting)은 루마니아에서 제작된 감독의 2005년 드라마, 공포, 미스터리, 스릴러 영화이다. 도날드 서덜랜드 등이 주연으로 출연하였고 등이 제작에 참여하였다."
+        },
+        "http://dbpedia.org/resource/Criminal_(2004_film)": {
+            "title": "Criminal",
+            "country": "Argentina",
+            "director": "http://dbpedia.org/resource/Gregory_Jacobs",
+            "actors": [
+                "John C. Reilly",
+                "Diego Luna",
+                "Maggie Gyllenhaal"
+            ],
+            "genres": [],
+            "designacao": "Criminal es una película filmada en 2004 basada en la película argentina Nueve reinas. Fue dirigida por Gregory Jacobs, protagonizada por John C. Reilly, Diego Luna, Maggie Gyllenhaal y . La producción estuvo a cargo de Section Eight, la productora de Steven Soderbergh y George Clooney."
+        },
+        "http://dbpedia.org/resource/Yajamana_(2000_film)": {
+            "title": "Yajamana",
+            "country": "India",
+            "director": "http://dbpedia.org/resource/Radha_Bharathi",
+            "actors": [
+                "Vishnuvardhan",
+                "Shashi Kumar"
+            ],
+            "genres": [
+                "http://dbpedia.org/resource/Film_soundtrack"
+            ],
+            "designacao": "Yajamana is a 2000 Indian Kannada-language film directed by R. Sheshadri and Radha Bharathi. The film is a remake of Tamil film Vaanathaippola (2000). The movie became an Industry hit. The film stars Vishnuvardhan, Prema, Shashikumar and Abhijeeth."
+        },
+        "http://dbpedia.org/resource/My_Big_Fat_Greek_Wedding_2": {
+            "title": "My Big Fat Greek Wedding 2",
+            "country": "United States",
+            "director": "http://dbpedia.org/resource/Kirk_Jones_(director)",
+            "actors": [
+                "Nia Vardalos",
+                "Gia Carides",
+                "Lainie Kazan",
+                "Joey Fatone",
+                "Andrea Martin",
+                "John Corbett"
+            ],
+            "genres": [],
+            "designacao": "«Моє велике грецьке весілля 2» (англ. My Big Fat Greek Wedding 2) — американська романтична кінокомедія режисера , що вийшла 2016 року. Стрічка є продовженням фільму «Моє велике грецьке весілля» (2002). У головних ролях Ніа Вардалос, Джон Корбетт, . Вперше фільм продемонстрували 15 березня 2016 року у Нью-Йорку, США, а в Україні у широкому кінопрокаті показ фільму має розпочатися 24 листопада 2016 року."
+        },
+        "http://dbpedia.org/resource/The_Adventures_of_Pluto_Nash": {
+            "title": "The Adventures of Pluto Nash",
+            "country": "",
+            "director": "http://dbpedia.org/resource/Ron_Underwood",
+            "actors": [
+                "John Cleese",
+                "James Rebhorn",
+                "Jay Mohr",
+                "Pam Grier",
+                "Luis Guzmán",
+                "Peter Boyle",
+                "Rosario Isabel Dawson"
+            ],
+            "genres": [],
+            "designacao": "Pluto Nash – Im Kampf gegen die Mondmafia (The Adventures of Pluto Nash) ist eine US-amerikanisch-australische Filmkomödie von Ron Underwood mit Eddie Murphy aus dem Jahr 2002. Der Film gilt als einer der größten Flops der Filmgeschichte."
+        },
+        "http://dbpedia.org/resource/Mother_and_Son_(2022_film)": {
+            "title": "Mother and Son",
+            "country": "France",
+            "director": "http://dbpedia.org/resource/Léonor_Serraille",
+            "actors": [
+                "Ahmed Sylla",
+                "Stéphane Bak"
+            ],
+            "genres": [],
+            "designacao": "Un petit frère (dt.: „Ein kleiner Bruder“, internationaler Titel: Mother and Son) ist ein französischer Spielfilm von Léonor Serraille aus dem Jahr 2022. Das Familiendrama wurde im Wettbewerb des Filmfestivals von Cannes am 27. Mai 2022 uraufgeführt."
+        },
+        "http://dbpedia.org/resource/Black_Coal,_Thin_Ice": {
+            "title": "Black Coal, Thin Ice",
+            "country": "China",
+            "director": "http://dbpedia.org/resource/Diao_Yinan",
+            "actors": [
+                "Gwei Lun-mei",
+                "Liao Fan"
+            ],
+            "genres": [],
+            "designacao": "Black Coal (chinois : 白日焰火, Bái rì yàn huǒ) est un film sino-hongkongais écrit et réalisé par Diao Yi'nan, sorti en 2014. Il remporte l'Ours d'or du meilleur film ainsi que l'Ours d'argent du meilleur acteur pour Liao Fan lors du festival de Berlin 2014."
+        },
+        "http://dbpedia.org/resource/Dead_Man_Walking_(film)": {
+            "title": "Dead Man Walking",
+            "country": "United States",
+            "director": "http://dbpedia.org/resource/Tim_Robbins",
+            "actors": [
+                "Robert Prosky",
+                "Sean Penn",
+                "Scott Wilson"
+            ],
+            "genres": [],
+            "designacao": "Dead Man Walking - Condannato a morte (Dead Man Walking) è un film del 1995 diretto da Tim Robbins, basato sull'omonimo romanzo autobiografico di suor Helen Prejean. Il titolo, Dead man walking, è preso dall'espressione che comunemente usano i carcerieri statunitensi per annunciare il tragitto che il condannato a morte compie fra la sua cella e la sala dell'esecuzione."
+        },
+        "http://dbpedia.org/resource/The_Midnight_Drives": {
+            "title": "The Midnight Drives",
+            "country": "United Kingdom",
+            "director": "http://dbpedia.org/resource/Mark_Jenkin",
+            "actors": [
+                "Mary Woodvine",
+                "John Woodvine"
+            ],
+            "genres": [],
+            "designacao": "The Midnight Drives is a 2007 British comedy-drama film written and directed by Mark Jenkin, which revolves around a divorcee who takes his bored children on a series of mystical, dream-like excursions through the Cornish country-side after initially failing to connect with them."
+        }
+    },
+    "actors": {
+        "Nicholas Kadi": {
+            "birthDate": "1952-09-22",
+            "birthPlace": "http://dbpedia.org/resource/Turkey"
+        },
+        "Sissy Spacek": {
+            "birthDate": "1949-12-25",
+            "birthPlace": "http://dbpedia.org/resource/Quitman,_Texas"
+        },
+        "James D'Arcy": {
+            "birthDate": "1975-08-24",
+            "birthPlace": "http://dbpedia.org/resource/Amersham"
+        },
+        "Donald Sutherland": {
+            "birthDate": "1935-07-17",
+            "birthPlace": "http://dbpedia.org/resource/Saint_John,_New_Brunswick"
+        },
+        "Maggie Gyllenhaal": {
+            "birthDate": "1977-11-16",
+            "birthPlace": "http://dbpedia.org/resource/Manhattan,_New_York_City"
+        },
+        "John C. Reilly": {
+            "birthDate": "1965-05-24",
+            "birthPlace": "http://dbpedia.org/resource/Chicago,_Illinois"
+        },
+        "Diego Luna": {
+            "birthDate": "1979-12-29",
+            "birthPlace": "http://dbpedia.org/resource/Toluca"
+        },
+        "Vishnuvardhan": {
+            "birthDate": "1950-09-18",
+            "birthPlace": "http://dbpedia.org/resource/Mysore_State"
+        },
+        "Shashi Kumar": {
+            "birthDate": "1965-12-02",
+            "birthPlace": "http://dbpedia.org/resource/Bengaluru"
+        },
+        "Gia Carides": {
+            "birthDate": "1964-06-07",
+            "birthPlace": "http://dbpedia.org/resource/Sydney"
+        },
+        "Andrea Martin": {
+            "birthDate": "1947-01-15",
+            "birthPlace": "http://dbpedia.org/resource/Portland,_Maine"
+        },
+        "Joey Fatone": {
+            "birthDate": "1977-01-28",
+            "birthPlace": "http://dbpedia.org/resource/New_York_City"
+        },
+        "John Corbett": {
+            "birthDate": "1961-05-09",
+            "birthPlace": "http://dbpedia.org/resource/Wheeling,_West_Virginia"
+        },
+        "Lainie Kazan": {
+            "birthDate": "1940-05-15",
+            "birthPlace": "http://dbpedia.org/resource/Brooklyn"
+        },
+        "Nia Vardalos": {
+            "birthDate": "1962-09-24",
+            "birthPlace": "http://dbpedia.org/resource/Winnipeg"
+        },
+        "Rosario Isabel Dawson": {
+            "birthDate": "1979-05-09",
+            "birthPlace": "http://dbpedia.org/resource/New_York_City"
+        },
+        "Peter Boyle": {
+            "birthDate": "1935-10-18",
+            "birthPlace": "http://dbpedia.org/resource/Norristown,_Pennsylvania"
+        },
+        "Luis Guzmán": {
+            "birthDate": "1956-08-28",
+            "birthPlace": "http://dbpedia.org/resource/Cayey,_Puerto_Rico"
+        },
+        "Pam Grier": {
+            "birthDate": "1949-05-26",
+            "birthPlace": "http://dbpedia.org/resource/Winston-Salem,_North_Carolina"
+        },
+        "James Rebhorn": {
+            "birthDate": "1948-09-01",
+            "birthPlace": "http://dbpedia.org/resource/Philadelphia,_Pennsylvania"
+        },
+        "Jay Mohr": {
+            "birthDate": "1970-08-23",
+            "birthPlace": "http://dbpedia.org/resource/Verona,_New_Jersey"
+        },
+        "John Cleese": {
+            "birthDate": "1939-10-27",
+            "birthPlace": "http://dbpedia.org/resource/England"
+        },
+        "Stéphane Bak": {
+            "birthDate": "1996-09-19",
+            "birthPlace": "http://dbpedia.org/resource/Seine-Saint-Denis"
+        },
+        "Ahmed Sylla": {
+            "birthDate": "1990-03-10",
+            "birthPlace": "http://dbpedia.org/resource/Nantes"
+        },
+        "Liao Fan": {
+            "birthDate": "1974-02-14",
+            "birthPlace": "http://dbpedia.org/resource/Changsha"
+        },
+        "Gwei Lun-mei": {
+            "birthDate": "1983-12-25",
+            "birthPlace": "http://dbpedia.org/resource/Taiwan"
+        },
+        "Robert Prosky": {
+            "birthDate": "1930-12-13",
+            "birthPlace": "http://dbpedia.org/resource/Philadelphia"
+        },
+        "Scott Wilson": {
+            "birthDate": "1942-03-29",
+            "birthPlace": "http://dbpedia.org/resource/Thomasville,_Georgia"
+        },
+        "Sean Penn": {
+            "birthDate": "1960-08-17",
+            "birthPlace": "http://dbpedia.org/resource/Santa_Monica,_California"
+        },
+        "John Woodvine": {
+            "birthDate": "1929-07-21",
+            "birthPlace": "http://dbpedia.org/resource/South_Shields"
+        },
+        "Mary Woodvine": {
+            "birthDate": "1967-07-14",
+            "birthPlace": "http://dbpedia.org/resource/Hammersmith"
+        }
+    }
+}
