@@ -1,0 +1,2579 @@
+
+@prefix : <http://example.org/disease/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/disease> rdf:type owl:Ontology .
+
+
+### http://example.org/disease#D0
+:D0 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Fungal infection" ;
+    :description "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S2 ;
+    :hasSymptom :S3 ;
+
+        :hasTreatment :P4 ;
+    :hasTreatment :P5 ;
+    :hasTreatment :P6 ;
+    :hasTreatment :P7 ;
+ .
+            
+### http://example.org/disease#D1
+:D1 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Allergy" ;
+    :description "An allergy is an immune system response to a foreign substance that's not typically harmful to your body.They can include certain foods, pollen, or pet dander. Your immune system's job is to keep you healthy by fighting harmful pathogens." ;
+        :hasSymptom :S8 ;
+    :hasSymptom :S9 ;
+    :hasSymptom :S10 ;
+    :hasSymptom :S11 ;
+
+        :hasTreatment :P12 ;
+    :hasTreatment :P13 ;
+    :hasTreatment :P14 ;
+ .
+            
+### http://example.org/disease#D2
+:D2 rdf:type owl:NamedIndividual , :Disease ;
+    :name "GERD" ;
+    :description "Gastroesophageal reflux disease, or GERD, is a digestive disorder that affects the lower esophageal sphincter (LES), the ring of muscle between the esophagus and stomach. Many people, including pregnant women, suffer from heartburn or acid indigestion caused by GERD." ;
+        :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S20 ;
+
+        :hasTreatment :P21 ;
+    :hasTreatment :P22 ;
+    :hasTreatment :P23 ;
+    :hasTreatment :P24 ;
+ .
+            
+### http://example.org/disease#D3
+:D3 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Chronic cholestasis" ;
+    :description "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases" ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S29 ;
+
+        :hasTreatment :P30 ;
+    :hasTreatment :P31 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P33 ;
+ .
+            
+### http://example.org/disease#D4
+:D4 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Drug Reaction" ;
+    :description "An adverse drug reaction (ADR) is an injury caused by taking medication. ADRs may occur following a single dose or prolonged administration of a drug or result from the combination of two or more drugs." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S34 ;
+    :hasSymptom :S35 ;
+
+        :hasTreatment :P36 ;
+    :hasTreatment :P37 ;
+    :hasTreatment :P38 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D5
+:D5 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Peptic ulcer diseae" ;
+    :description "Peptic ulcer disease (PUD) is a break in the inner lining of the stomach, the first part of the small intestine, or sometimes the lower esophagus. An ulcer in the stomach is called a gastric ulcer, while one in the first part of the intestines is a duodenal ulcer." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S40 ;
+    :hasSymptom :S41 ;
+
+        :hasTreatment :P21 ;
+    :hasTreatment :P42 ;
+    :hasTreatment :P43 ;
+    :hasTreatment :P44 ;
+ .
+            
+### http://example.org/disease#D6
+:D6 rdf:type owl:NamedIndividual , :Disease ;
+    :name "AIDS" ;
+    :description "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease." ;
+        :hasSymptom :S45 ;
+    :hasSymptom :S46 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S48 ;
+
+        :hasTreatment :P49 ;
+    :hasTreatment :P50 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D7
+:D7 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Diabetes " ;
+    :description "No description available." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S52 ;
+    :hasSymptom :S53 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S55 ;
+    :hasSymptom :S56 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S59 ;
+    :hasSymptom :S60 ;
+
+        :hasTreatment :P61 ;
+    :hasTreatment :P24 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D8
+:D8 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Gastroenteritis" ;
+    :description "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea , abdominal cramps, nausea , and vomiting ." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S63 ;
+    :hasSymptom :S64 ;
+
+        :hasTreatment :P65 ;
+    :hasTreatment :P66 ;
+    :hasTreatment :P67 ;
+    :hasTreatment :P68 ;
+ .
+            
+### http://example.org/disease#D9
+:D9 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Bronchial Asthma" ;
+    :description "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S69 ;
+    :hasSymptom :S70 ;
+    :hasSymptom :S71 ;
+
+        :hasTreatment :P72 ;
+    :hasTreatment :P73 ;
+    :hasTreatment :P74 ;
+    :hasTreatment :P75 ;
+ .
+            
+### http://example.org/disease#D10
+:D10 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypertension " ;
+    :description "No description available." ;
+        :hasSymptom :S76 ;
+    :hasSymptom :S20 ;
+    :hasSymptom :S77 ;
+    :hasSymptom :S78 ;
+    :hasSymptom :S79 ;
+
+        :hasTreatment :P80 ;
+    :hasTreatment :P81 ;
+    :hasTreatment :P82 ;
+    :hasTreatment :P83 ;
+ .
+            
+### http://example.org/disease#D11
+:D11 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Migraine" ;
+    :description "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities." ;
+        :hasSymptom :S16 ;
+    :hasSymptom :S84 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S56 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S85 ;
+    :hasSymptom :S86 ;
+    :hasSymptom :S87 ;
+    :hasSymptom :S88 ;
+
+        :hasTreatment :P80 ;
+    :hasTreatment :P82 ;
+    :hasTreatment :P89 ;
+    :hasTreatment :P32 ;
+ .
+            
+### http://example.org/disease#D12
+:D12 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Cervical spondylosis" ;
+    :description "Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck. As the disks dehydrate and shrink, signs of osteoarthritis develop, including bony projections along the edges of bones (bone spurs)." ;
+        :hasSymptom :S90 ;
+    :hasSymptom :S91 ;
+    :hasSymptom :S92 ;
+    :hasSymptom :S77 ;
+    :hasSymptom :S78 ;
+
+        :hasTreatment :P93 ;
+    :hasTreatment :P24 ;
+    :hasTreatment :P94 ;
+    :hasTreatment :P32 ;
+ .
+            
+### http://example.org/disease#D13
+:D13 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Paralysis (brain hemorrhage)" ;
+    :description "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S95 ;
+    :hasSymptom :S96 ;
+
+        :hasTreatment :P97 ;
+    :hasTreatment :P33 ;
+    :hasTreatment :P24 ;
+    :hasTreatment :P32 ;
+ .
+            
+### http://example.org/disease#D14
+:D14 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Jaundice" ;
+    :description "Yellow staining of the skin and sclerae (the whites of the eyes) by abnormally high blood levels of the bile pigment bilirubin. The yellowing extends to other tissues and body fluids. Jaundice was once called the morbus regius (the regal disease) in the belief that only the touch of a king could cure it" ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S52 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S28 ;
+
+        :hasTreatment :P99 ;
+    :hasTreatment :P100 ;
+    :hasTreatment :P101 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D15
+:D15 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Malaria" ;
+    :description "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type." ;
+        :hasSymptom :S10 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S104 ;
+
+        :hasTreatment :P105 ;
+    :hasTreatment :P106 ;
+    :hasTreatment :P107 ;
+    :hasTreatment :P108 ;
+ .
+            
+### http://example.org/disease#D16
+:D16 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Chicken pox" ;
+    :description "Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S109 ;
+    :hasSymptom :S110 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S112 ;
+
+        :hasTreatment :P113 ;
+    :hasTreatment :P114 ;
+    :hasTreatment :P115 ;
+    :hasTreatment :P116 ;
+ .
+            
+### http://example.org/disease#D17
+:D17 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Dengue" ;
+    :description "an acute infectious disease caused by a flavivirus (species Dengue virus of the genus Flavivirus), transmitted by aedes mosquitoes, and characterized by headache, severe joint pain, and a rash. — called also breakbone fever, dengue fever." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S10 ;
+    :hasSymptom :S117 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S118 ;
+    :hasSymptom :S90 ;
+    :hasSymptom :S104 ;
+    :hasSymptom :S112 ;
+
+        :hasTreatment :P119 ;
+    :hasTreatment :P21 ;
+    :hasTreatment :P120 ;
+    :hasTreatment :P121 ;
+ .
+            
+### http://example.org/disease#D18
+:D18 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Typhoid" ;
+    :description "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe." ;
+        :hasSymptom :S10 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S122 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S64 ;
+    :hasSymptom :S123 ;
+    :hasSymptom :S124 ;
+
+        :hasTreatment :P125 ;
+    :hasTreatment :P126 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D19
+:D19 rdf:type owl:NamedIndividual , :Disease ;
+    :name "hepatitis A" ;
+    :description "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function." ;
+        :hasSymptom :S117 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S64 ;
+    :hasSymptom :S109 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S104 ;
+
+        :hasTreatment :P105 ;
+    :hasTreatment :P127 ;
+    :hasTreatment :P21 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D20
+:D20 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis B" ;
+    :description "Hepatitis B is an infection of your liver. It can cause scarring of the organ, liver failure, and cancer. It can be fatal if it isn't treated. It's spread when people come in contact with the blood, open sores, or body fluids of someone who has the hepatitis B virus." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S128 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S129 ;
+    :hasSymptom :S130 ;
+
+        :hasTreatment :P37 ;
+    :hasTreatment :P131 ;
+    :hasTreatment :P33 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D21
+:D21 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis C" ;
+    :description "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S70 ;
+
+        :hasTreatment :P105 ;
+    :hasTreatment :P131 ;
+    :hasTreatment :P33 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D22
+:D22 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis D" ;
+    :description "Hepatitis D, also known as the hepatitis delta virus, is an infection that causes the liver to become inflamed. This swelling can impair liver function and cause long-term liver problems, including liver scarring and cancer. The condition is caused by the hepatitis D virus (HDV)." ;
+        :hasSymptom :S117 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S29 ;
+
+        :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+    :hasTreatment :P33 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D23
+:D23 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis E" ;
+    :description "A rare form of liver inflammation caused by infection with the hepatitis E virus (HEV). It is transmitted via food or drink handled by an infected person or through infected water supplies in areas where fecal matter may get into the water. Hepatitis E does not cause chronic liver disease." ;
+        :hasSymptom :S117 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S132 ;
+    :hasSymptom :S133 ;
+
+        :hasTreatment :P134 ;
+    :hasTreatment :P67 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+ .
+            
+### http://example.org/disease#D24
+:D24 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Alcoholic hepatitis" ;
+    :description "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol" ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S135 ;
+    :hasSymptom :S136 ;
+    :hasSymptom :S137 ;
+    :hasSymptom :S138 ;
+
+        :hasTreatment :P134 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D25
+:D25 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Tuberculosis" ;
+    :description "Tuberculosis (TB) is an infectious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria. Tuberculosis generally affects the lungs, but can also affect other parts of the body. Most infections show no symptoms, in which case it is known as latent tuberculosis." ;
+        :hasSymptom :S10 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S52 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S69 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S109 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S110 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S139 ;
+    :hasSymptom :S20 ;
+    :hasSymptom :S140 ;
+
+        :hasTreatment :P141 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+    :hasTreatment :P67 ;
+ .
+            
+### http://example.org/disease#D26
+:D26 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Common Cold" ;
+    :description "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold." ;
+        :hasSymptom :S8 ;
+    :hasSymptom :S10 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S110 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S139 ;
+    :hasSymptom :S142 ;
+    :hasSymptom :S143 ;
+    :hasSymptom :S144 ;
+    :hasSymptom :S145 ;
+    :hasSymptom :S146 ;
+    :hasSymptom :S20 ;
+    :hasSymptom :S147 ;
+    :hasSymptom :S104 ;
+
+        :hasTreatment :P148 ;
+    :hasTreatment :P149 ;
+    :hasTreatment :P150 ;
+    :hasTreatment :P151 ;
+ .
+            
+### http://example.org/disease#D27
+:D27 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Pneumonia" ;
+    :description "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe." ;
+        :hasSymptom :S10 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S69 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S20 ;
+    :hasSymptom :S152 ;
+    :hasSymptom :S153 ;
+
+        :hasTreatment :P32 ;
+    :hasTreatment :P102 ;
+    :hasTreatment :P67 ;
+    :hasTreatment :P39 ;
+ .
+            
+### http://example.org/disease#D28
+:D28 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Dimorphic hemmorhoids(piles)" ;
+    :description "No description available." ;
+        :hasSymptom :S122 ;
+    :hasSymptom :S154 ;
+    :hasSymptom :S155 ;
+    :hasSymptom :S156 ;
+    :hasSymptom :S157 ;
+
+        :hasTreatment :P21 ;
+    :hasTreatment :P158 ;
+    :hasTreatment :P159 ;
+    :hasTreatment :P160 ;
+ .
+            
+### http://example.org/disease#D29
+:D29 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Heart attack" ;
+    :description "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S69 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S20 ;
+
+        :hasTreatment :P161 ;
+    :hasTreatment :P162 ;
+    :hasTreatment :P163 ;
+ .
+            
+### http://example.org/disease#D30
+:D30 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Varicose veins" ;
+    :description "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S164 ;
+    :hasSymptom :S165 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S166 ;
+    :hasSymptom :S167 ;
+    :hasSymptom :S168 ;
+
+        :hasTreatment :P169 ;
+    :hasTreatment :P170 ;
+    :hasTreatment :P171 ;
+    :hasTreatment :P172 ;
+ .
+            
+### http://example.org/disease#D31
+:D31 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypothyroidism" ;
+    :description "Hypothyroidism, also called underactive thyroid or low thyroid, is a disorder of the endocrine system in which the thyroid gland does not produce enough thyroid hormone." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S173 ;
+    :hasSymptom :S174 ;
+    :hasSymptom :S175 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S77 ;
+    :hasSymptom :S176 ;
+    :hasSymptom :S177 ;
+    :hasSymptom :S178 ;
+    :hasSymptom :S179 ;
+    :hasSymptom :S86 ;
+    :hasSymptom :S87 ;
+    :hasSymptom :S180 ;
+
+        :hasTreatment :P82 ;
+    :hasTreatment :P24 ;
+    :hasTreatment :P33 ;
+    :hasTreatment :P83 ;
+ .
+            
+### http://example.org/disease#D32
+:D32 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hyperthyroidism" ;
+    :description "Hyperthyroidism (overactive thyroid) occurs when your thyroid gland produces too much of the hormone thyroxine. Hyperthyroidism can accelerate your body's metabolism, causing unintentional weight loss and a rapid or irregular heartbeat." ;
+        :hasSymptom :S51 ;
+    :hasSymptom :S175 ;
+    :hasSymptom :S52 ;
+    :hasSymptom :S53 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S64 ;
+    :hasSymptom :S152 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S181 ;
+    :hasSymptom :S87 ;
+    :hasSymptom :S180 ;
+
+        :hasTreatment :P33 ;
+    :hasTreatment :P97 ;
+    :hasTreatment :P182 ;
+    :hasTreatment :P183 ;
+ .
+            
+### http://example.org/disease#D33
+:D33 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypoglycemia" ;
+    :description " Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S51 ;
+    :hasSymptom :S184 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S56 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S185 ;
+    :hasSymptom :S87 ;
+    :hasSymptom :S186 ;
+
+        :hasTreatment :P187 ;
+    :hasTreatment :P188 ;
+    :hasTreatment :P189 ;
+    :hasTreatment :P32 ;
+ .
+            
+### http://example.org/disease#D34
+:D34 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Osteoarthristis" ;
+    :description "Osteoarthritis is the most common form of arthritis, affecting millions of people worldwide. It occurs when the protective cartilage that cushions the ends of your bones wears down over time." ;
+        :hasSymptom :S117 ;
+    :hasSymptom :S92 ;
+    :hasSymptom :S190 ;
+    :hasSymptom :S191 ;
+    :hasSymptom :S192 ;
+    :hasSymptom :S193 ;
+
+        :hasTreatment :P194 ;
+    :hasTreatment :P37 ;
+    :hasTreatment :P39 ;
+    :hasTreatment :P81 ;
+ .
+            
+### http://example.org/disease#D35
+:D35 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Arthritis" ;
+    :description "Arthritis is the swelling and tenderness of one or more of your joints. The main symptoms of arthritis are joint pain and stiffness, which typically worsen with age. The most common types of arthritis are osteoarthritis and rheumatoid arthritis." ;
+        :hasSymptom :S181 ;
+    :hasSymptom :S85 ;
+    :hasSymptom :S192 ;
+    :hasSymptom :S195 ;
+    :hasSymptom :S193 ;
+
+        :hasTreatment :P24 ;
+    :hasTreatment :P196 ;
+    :hasTreatment :P197 ;
+    :hasTreatment :P97 ;
+ .
+            
+### http://example.org/disease#D36
+:D36 rdf:type owl:NamedIndividual , :Disease ;
+    :name "(vertigo) Paroymsal  Positional Vertigo" ;
+    :description "Benign paroxysmal positional vertigo (BPPV) is one of the most common causes of vertigo — the sudden sensation that you're spinning or that the inside of your head is spinning. Benign paroxysmal positional vertigo causes brief episodes of mild to intense dizziness." ;
+        :hasSymptom :S18 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S26 ;
+    :hasSymptom :S198 ;
+    :hasSymptom :S78 ;
+    :hasSymptom :S199 ;
+
+        :hasTreatment :P200 ;
+    :hasTreatment :P201 ;
+    :hasTreatment :P202 ;
+    :hasTreatment :P203 ;
+ .
+            
+### http://example.org/disease#D37
+:D37 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Acne" ;
+    :description "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S204 ;
+    :hasSymptom :S205 ;
+    :hasSymptom :S206 ;
+
+        :hasTreatment :P4 ;
+    :hasTreatment :P21 ;
+    :hasTreatment :P99 ;
+    :hasTreatment :P207 ;
+ .
+            
+### http://example.org/disease#D38
+:D38 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Urinary tract infection" ;
+    :description "Urinary tract infection: An infection of the kidney, ureter, bladder, or urethra. Abbreviated UTI. Not everyone with a UTI has symptoms, but common symptoms include a frequent urge to urinate and pain or burning when urinating." ;
+        :hasSymptom :S34 ;
+    :hasSymptom :S208 ;
+    :hasSymptom :S209 ;
+    :hasSymptom :S210 ;
+
+        :hasTreatment :P99 ;
+    :hasTreatment :P211 ;
+    :hasTreatment :P212 ;
+    :hasTreatment :P213 ;
+ .
+            
+### http://example.org/disease#D39
+:D39 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Psoriasis" ;
+    :description "Psoriasis is a common skin disorder that forms thick, red, bumpy patches covered with silvery scales. They can pop up anywhere, but most appear on the scalp, elbows, knees, and lower back. Psoriasis can't be passed from person to person. It does sometimes happen in members of the same family." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S117 ;
+    :hasSymptom :S214 ;
+    :hasSymptom :S215 ;
+    :hasSymptom :S216 ;
+    :hasSymptom :S217 ;
+
+        :hasTreatment :P218 ;
+    :hasTreatment :P219 ;
+    :hasTreatment :P32 ;
+    :hasTreatment :P81 ;
+ .
+            
+### http://example.org/disease#D40
+:D40 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Impetigo" ;
+    :description "Impetigo (im-puh-TIE-go) is a common and highly contagious skin infection that mainly affects infants and children. Impetigo usually appears as red sores on the face, especially around a child's nose and mouth, and on hands and feet. The sores burst and develop honey-colored crusts." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S220 ;
+    :hasSymptom :S221 ;
+    :hasSymptom :S222 ;
+
+        :hasTreatment :P223 ;
+    :hasTreatment :P224 ;
+    :hasTreatment :P225 ;
+    :hasTreatment :P32 ;
+ .
+            
+### http://example.org/disease#S0
+:S0 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "itching" .
+            
+### http://example.org/disease#S1
+:S1 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " skin_rash" .
+            
+### http://example.org/disease#S2
+:S2 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " nodal_skin_eruptions" .
+            
+### http://example.org/disease#S3
+:S3 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dischromic _patches" .
+            
+### http://example.org/disease#S4
+:S4 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "bath twice" .
+            
+### http://example.org/disease#S5
+:S5 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use detol or neem in bathing water" .
+            
+### http://example.org/disease#S6
+:S6 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep infected area dry" .
+            
+### http://example.org/disease#S7
+:S7 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use clean cloths" .
+            
+### http://example.org/disease#S8
+:S8 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " continuous_sneezing" .
+            
+### http://example.org/disease#S9
+:S9 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " shivering" .
+            
+### http://example.org/disease#S10
+:S10 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " chills" .
+            
+### http://example.org/disease#S11
+:S11 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " watering_from_eyes" .
+            
+### http://example.org/disease#S12
+:S12 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "apply calamine" .
+            
+### http://example.org/disease#S13
+:S13 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "cover area with bandage" .
+            
+### http://example.org/disease#S14
+:S14 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use ice to compress itching" .
+            
+### http://example.org/disease#S15
+:S15 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stomach_pain" .
+            
+### http://example.org/disease#S16
+:S16 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " acidity" .
+            
+### http://example.org/disease#S17
+:S17 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " ulcers_on_tongue" .
+            
+### http://example.org/disease#S18
+:S18 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " vomiting" .
+            
+### http://example.org/disease#S19
+:S19 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cough" .
+            
+### http://example.org/disease#S20
+:S20 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " chest_pain" .
+            
+### http://example.org/disease#S21
+:S21 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid fatty spicy food" .
+            
+### http://example.org/disease#S22
+:S22 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid lying down after eating" .
+            
+### http://example.org/disease#S23
+:S23 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "maintain healthy weight" .
+            
+### http://example.org/disease#S24
+:S24 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "exercise" .
+            
+### http://example.org/disease#S25
+:S25 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellowish_skin" .
+            
+### http://example.org/disease#S26
+:S26 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " nausea" .
+            
+### http://example.org/disease#S27
+:S27 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_appetite" .
+            
+### http://example.org/disease#S28
+:S28 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " abdominal_pain" .
+            
+### http://example.org/disease#S29
+:S29 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellowing_of_eyes" .
+            
+### http://example.org/disease#S30
+:S30 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "cold baths" .
+            
+### http://example.org/disease#S31
+:S31 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "anti itch medicine" .
+            
+### http://example.org/disease#S32
+:S32 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consult doctor" .
+            
+### http://example.org/disease#S33
+:S33 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "eat healthy" .
+            
+### http://example.org/disease#S34
+:S34 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " burning_micturition" .
+            
+### http://example.org/disease#S35
+:S35 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " spotting_ urination" .
+            
+### http://example.org/disease#S36
+:S36 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "stop irritation" .
+            
+### http://example.org/disease#S37
+:S37 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consult nearest hospital" .
+            
+### http://example.org/disease#S38
+:S38 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "stop taking drug" .
+            
+### http://example.org/disease#S39
+:S39 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "follow up" .
+            
+### http://example.org/disease#S40
+:S40 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " passage_of_gases" .
+            
+### http://example.org/disease#S41
+:S41 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " internal_itching" .
+            
+### http://example.org/disease#S42
+:S42 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consume probiotic food" .
+            
+### http://example.org/disease#S43
+:S43 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "eliminate milk" .
+            
+### http://example.org/disease#S44
+:S44 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "limit alcohol" .
+            
+### http://example.org/disease#S45
+:S45 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_wasting" .
+            
+### http://example.org/disease#S46
+:S46 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " patches_in_throat" .
+            
+### http://example.org/disease#S47
+:S47 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " high_fever" .
+            
+### http://example.org/disease#S48
+:S48 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " extra_marital_contacts" .
+            
+### http://example.org/disease#S49
+:S49 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid open cuts" .
+            
+### http://example.org/disease#S50
+:S50 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "wear ppe if possible" .
+            
+### http://example.org/disease#S51
+:S51 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fatigue" .
+            
+### http://example.org/disease#S52
+:S52 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weight_loss" .
+            
+### http://example.org/disease#S53
+:S53 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " restlessness" .
+            
+### http://example.org/disease#S54
+:S54 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " lethargy" .
+            
+### http://example.org/disease#S55
+:S55 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irregular_sugar_level" .
+            
+### http://example.org/disease#S56
+:S56 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blurred_and_distorted_vision" .
+            
+### http://example.org/disease#S57
+:S57 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " obesity" .
+            
+### http://example.org/disease#S58
+:S58 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " excessive_hunger" .
+            
+### http://example.org/disease#S59
+:S59 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " increased_appetite" .
+            
+### http://example.org/disease#S60
+:S60 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " polyuria" .
+            
+### http://example.org/disease#S61
+:S61 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "have balanced diet" .
+            
+### http://example.org/disease#S62
+:S62 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sunken_eyes" .
+            
+### http://example.org/disease#S63
+:S63 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dehydration" .
+            
+### http://example.org/disease#S64
+:S64 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " diarrhoea" .
+            
+### http://example.org/disease#S65
+:S65 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "stop eating solid food for while" .
+            
+### http://example.org/disease#S66
+:S66 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "try taking small sips of water" .
+            
+### http://example.org/disease#S67
+:S67 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "rest" .
+            
+### http://example.org/disease#S68
+:S68 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "ease back into eating" .
+            
+### http://example.org/disease#S69
+:S69 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " breathlessness" .
+            
+### http://example.org/disease#S70
+:S70 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " family_history" .
+            
+### http://example.org/disease#S71
+:S71 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mucoid_sputum" .
+            
+### http://example.org/disease#S72
+:S72 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "switch to loose cloothing" .
+            
+### http://example.org/disease#S73
+:S73 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take deep breaths" .
+            
+### http://example.org/disease#S74
+:S74 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "get away from trigger" .
+            
+### http://example.org/disease#S75
+:S75 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "seek help" .
+            
+### http://example.org/disease#S76
+:S76 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " headache" .
+            
+### http://example.org/disease#S77
+:S77 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dizziness" .
+            
+### http://example.org/disease#S78
+:S78 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_balance" .
+            
+### http://example.org/disease#S79
+:S79 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " lack_of_concentration" .
+            
+### http://example.org/disease#S80
+:S80 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "meditation" .
+            
+### http://example.org/disease#S81
+:S81 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "salt baths" .
+            
+### http://example.org/disease#S82
+:S82 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "reduce stress" .
+            
+### http://example.org/disease#S83
+:S83 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "get proper sleep" .
+            
+### http://example.org/disease#S84
+:S84 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " indigestion" .
+            
+### http://example.org/disease#S85
+:S85 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stiff_neck" .
+            
+### http://example.org/disease#S86
+:S86 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " depression" .
+            
+### http://example.org/disease#S87
+:S87 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irritability" .
+            
+### http://example.org/disease#S88
+:S88 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " visual_disturbances" .
+            
+### http://example.org/disease#S89
+:S89 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use poloroid glasses in sun" .
+            
+### http://example.org/disease#S90
+:S90 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " back_pain" .
+            
+### http://example.org/disease#S91
+:S91 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weakness_in_limbs" .
+            
+### http://example.org/disease#S92
+:S92 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " neck_pain" .
+            
+### http://example.org/disease#S93
+:S93 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use heating pad or cold pack" .
+            
+### http://example.org/disease#S94
+:S94 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take otc pain reliver" .
+            
+### http://example.org/disease#S95
+:S95 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weakness_of_one_body_side" .
+            
+### http://example.org/disease#S96
+:S96 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " altered_sensorium" .
+            
+### http://example.org/disease#S97
+:S97 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "massage" .
+            
+### http://example.org/disease#S98
+:S98 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dark_urine" .
+            
+### http://example.org/disease#S99
+:S99 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "drink plenty of water" .
+            
+### http://example.org/disease#S100
+:S100 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consume milk thistle" .
+            
+### http://example.org/disease#S101
+:S101 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "eat fruits and high fiberous food" .
+            
+### http://example.org/disease#S102
+:S102 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "medication" .
+            
+### http://example.org/disease#S103
+:S103 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sweating" .
+            
+### http://example.org/disease#S104
+:S104 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_pain" .
+            
+### http://example.org/disease#S105
+:S105 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "Consult nearest hospital" .
+            
+### http://example.org/disease#S106
+:S106 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid oily food" .
+            
+### http://example.org/disease#S107
+:S107 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid non veg food" .
+            
+### http://example.org/disease#S108
+:S108 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep mosquitos out" .
+            
+### http://example.org/disease#S109
+:S109 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mild_fever" .
+            
+### http://example.org/disease#S110
+:S110 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelled_lymph_nodes" .
+            
+### http://example.org/disease#S111
+:S111 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " malaise" .
+            
+### http://example.org/disease#S112
+:S112 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " red_spots_over_body" .
+            
+### http://example.org/disease#S113
+:S113 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use neem in bathing " .
+            
+### http://example.org/disease#S114
+:S114 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consume neem leaves" .
+            
+### http://example.org/disease#S115
+:S115 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take vaccine" .
+            
+### http://example.org/disease#S116
+:S116 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid public places" .
+            
+### http://example.org/disease#S117
+:S117 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " joint_pain" .
+            
+### http://example.org/disease#S118
+:S118 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_behind_the_eyes" .
+            
+### http://example.org/disease#S119
+:S119 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "drink papaya leaf juice" .
+            
+### http://example.org/disease#S120
+:S120 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep mosquitos away" .
+            
+### http://example.org/disease#S121
+:S121 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep hydrated" .
+            
+### http://example.org/disease#S122
+:S122 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " constipation" .
+            
+### http://example.org/disease#S123
+:S123 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " toxic_look_(typhos)" .
+            
+### http://example.org/disease#S124
+:S124 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " belly_pain" .
+            
+### http://example.org/disease#S125
+:S125 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "eat high calorie vegitables" .
+            
+### http://example.org/disease#S126
+:S126 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "antiboitic therapy" .
+            
+### http://example.org/disease#S127
+:S127 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "wash hands through" .
+            
+### http://example.org/disease#S128
+:S128 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellow_urine" .
+            
+### http://example.org/disease#S129
+:S129 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " receiving_blood_transfusion" .
+            
+### http://example.org/disease#S130
+:S130 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " receiving_unsterile_injections" .
+            
+### http://example.org/disease#S131
+:S131 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "vaccination" .
+            
+### http://example.org/disease#S132
+:S132 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " coma" .
+            
+### http://example.org/disease#S133
+:S133 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stomach_bleeding" .
+            
+### http://example.org/disease#S134
+:S134 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "stop alcohol consumption" .
+            
+### http://example.org/disease#S135
+:S135 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelling_of_stomach" .
+            
+### http://example.org/disease#S136
+:S136 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " distention_of_abdomen" .
+            
+### http://example.org/disease#S137
+:S137 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " history_of_alcohol_consumption" .
+            
+### http://example.org/disease#S138
+:S138 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fluid_overload" .
+            
+### http://example.org/disease#S139
+:S139 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " phlegm" .
+            
+### http://example.org/disease#S140
+:S140 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blood_in_sputum" .
+            
+### http://example.org/disease#S141
+:S141 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "cover mouth" .
+            
+### http://example.org/disease#S142
+:S142 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " throat_irritation" .
+            
+### http://example.org/disease#S143
+:S143 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " redness_of_eyes" .
+            
+### http://example.org/disease#S144
+:S144 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sinus_pressure" .
+            
+### http://example.org/disease#S145
+:S145 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " runny_nose" .
+            
+### http://example.org/disease#S146
+:S146 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " congestion" .
+            
+### http://example.org/disease#S147
+:S147 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_smell" .
+            
+### http://example.org/disease#S148
+:S148 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "drink vitamin c rich drinks" .
+            
+### http://example.org/disease#S149
+:S149 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take vapour" .
+            
+### http://example.org/disease#S150
+:S150 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid cold food" .
+            
+### http://example.org/disease#S151
+:S151 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep fever in check" .
+            
+### http://example.org/disease#S152
+:S152 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fast_heart_rate" .
+            
+### http://example.org/disease#S153
+:S153 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " rusty_sputum" .
+            
+### http://example.org/disease#S154
+:S154 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_during_bowel_movements" .
+            
+### http://example.org/disease#S155
+:S155 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_in_anal_region" .
+            
+### http://example.org/disease#S156
+:S156 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bloody_stool" .
+            
+### http://example.org/disease#S157
+:S157 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irritation_in_anus" .
+            
+### http://example.org/disease#S158
+:S158 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consume witch hazel" .
+            
+### http://example.org/disease#S159
+:S159 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "warm bath with epsom salt" .
+            
+### http://example.org/disease#S160
+:S160 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "consume alovera juice" .
+            
+### http://example.org/disease#S161
+:S161 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "call ambulance" .
+            
+### http://example.org/disease#S162
+:S162 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "chew or swallow asprin" .
+            
+### http://example.org/disease#S163
+:S163 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "keep calm" .
+            
+### http://example.org/disease#S164
+:S164 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cramps" .
+            
+### http://example.org/disease#S165
+:S165 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bruising" .
+            
+### http://example.org/disease#S166
+:S166 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_legs" .
+            
+### http://example.org/disease#S167
+:S167 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_blood_vessels" .
+            
+### http://example.org/disease#S168
+:S168 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " prominent_veins_on_calf" .
+            
+### http://example.org/disease#S169
+:S169 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "lie down flat and raise the leg high" .
+            
+### http://example.org/disease#S170
+:S170 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use oinments" .
+            
+### http://example.org/disease#S171
+:S171 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use vein compression" .
+            
+### http://example.org/disease#S172
+:S172 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "dont stand still for long" .
+            
+### http://example.org/disease#S173
+:S173 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weight_gain" .
+            
+### http://example.org/disease#S174
+:S174 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cold_hands_and_feets" .
+            
+### http://example.org/disease#S175
+:S175 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mood_swings" .
+            
+### http://example.org/disease#S176
+:S176 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " puffy_face_and_eyes" .
+            
+### http://example.org/disease#S177
+:S177 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " enlarged_thyroid" .
+            
+### http://example.org/disease#S178
+:S178 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " brittle_nails" .
+            
+### http://example.org/disease#S179
+:S179 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_extremeties" .
+            
+### http://example.org/disease#S180
+:S180 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " abnormal_menstruation" .
+            
+### http://example.org/disease#S181
+:S181 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_weakness" .
+            
+### http://example.org/disease#S182
+:S182 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use lemon balm" .
+            
+### http://example.org/disease#S183
+:S183 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take radioactive iodine treatment" .
+            
+### http://example.org/disease#S184
+:S184 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " anxiety" .
+            
+### http://example.org/disease#S185
+:S185 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " slurred_speech" .
+            
+### http://example.org/disease#S186
+:S186 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " palpitations" .
+            
+### http://example.org/disease#S187
+:S187 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "lie down on side" .
+            
+### http://example.org/disease#S188
+:S188 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "check in pulse" .
+            
+### http://example.org/disease#S189
+:S189 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "drink sugary drinks" .
+            
+### http://example.org/disease#S190
+:S190 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " knee_pain" .
+            
+### http://example.org/disease#S191
+:S191 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " hip_joint_pain" .
+            
+### http://example.org/disease#S192
+:S192 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelling_joints" .
+            
+### http://example.org/disease#S193
+:S193 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " painful_walking" .
+            
+### http://example.org/disease#S194
+:S194 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "acetaminophen" .
+            
+### http://example.org/disease#S195
+:S195 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " movement_stiffness" .
+            
+### http://example.org/disease#S196
+:S196 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use hot and cold therapy" .
+            
+### http://example.org/disease#S197
+:S197 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "try acupuncture" .
+            
+### http://example.org/disease#S198
+:S198 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " spinning_movements" .
+            
+### http://example.org/disease#S199
+:S199 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " unsteadiness" .
+            
+### http://example.org/disease#S200
+:S200 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "lie down" .
+            
+### http://example.org/disease#S201
+:S201 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid sudden change in body" .
+            
+### http://example.org/disease#S202
+:S202 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid abrupt head movment" .
+            
+### http://example.org/disease#S203
+:S203 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "relax" .
+            
+### http://example.org/disease#S204
+:S204 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pus_filled_pimples" .
+            
+### http://example.org/disease#S205
+:S205 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blackheads" .
+            
+### http://example.org/disease#S206
+:S206 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " scurring" .
+            
+### http://example.org/disease#S207
+:S207 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "avoid too many products" .
+            
+### http://example.org/disease#S208
+:S208 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bladder_discomfort" .
+            
+### http://example.org/disease#S209
+:S209 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " foul_smell_of urine" .
+            
+### http://example.org/disease#S210
+:S210 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " continuous_feel_of_urine" .
+            
+### http://example.org/disease#S211
+:S211 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "increase vitamin c intake" .
+            
+### http://example.org/disease#S212
+:S212 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "drink cranberry juice" .
+            
+### http://example.org/disease#S213
+:S213 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "take probiotics" .
+            
+### http://example.org/disease#S214
+:S214 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " skin_peeling" .
+            
+### http://example.org/disease#S215
+:S215 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " silver_like_dusting" .
+            
+### http://example.org/disease#S216
+:S216 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " small_dents_in_nails" .
+            
+### http://example.org/disease#S217
+:S217 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " inflammatory_nails" .
+            
+### http://example.org/disease#S218
+:S218 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "wash hands with warm soapy water" .
+            
+### http://example.org/disease#S219
+:S219 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "stop bleeding using pressure" .
+            
+### http://example.org/disease#S220
+:S220 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blister" .
+            
+### http://example.org/disease#S221
+:S221 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " red_sore_around_nose" .
+            
+### http://example.org/disease#S222
+:S222 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellow_crust_ooze" .
+            
+### http://example.org/disease#S223
+:S223 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "soak affected area in warm water" .
+            
+### http://example.org/disease#S224
+:S224 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "use antibiotics" .
+            
+### http://example.org/disease#S225
+:S225 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "remove scabs with wet compressed cloth" .
+            
+### http://example.org/disease#P0
+:P0 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "itching" .
+            
+### http://example.org/disease#P1
+:P1 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " skin_rash" .
+            
+### http://example.org/disease#P2
+:P2 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " nodal_skin_eruptions" .
+            
+### http://example.org/disease#P3
+:P3 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " dischromic _patches" .
+            
+### http://example.org/disease#P4
+:P4 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "bath twice" .
+            
+### http://example.org/disease#P5
+:P5 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use detol or neem in bathing water" .
+            
+### http://example.org/disease#P6
+:P6 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep infected area dry" .
+            
+### http://example.org/disease#P7
+:P7 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use clean cloths" .
+            
+### http://example.org/disease#P8
+:P8 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " continuous_sneezing" .
+            
+### http://example.org/disease#P9
+:P9 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " shivering" .
+            
+### http://example.org/disease#P10
+:P10 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " chills" .
+            
+### http://example.org/disease#P11
+:P11 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " watering_from_eyes" .
+            
+### http://example.org/disease#P12
+:P12 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "apply calamine" .
+            
+### http://example.org/disease#P13
+:P13 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "cover area with bandage" .
+            
+### http://example.org/disease#P14
+:P14 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use ice to compress itching" .
+            
+### http://example.org/disease#P15
+:P15 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " stomach_pain" .
+            
+### http://example.org/disease#P16
+:P16 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " acidity" .
+            
+### http://example.org/disease#P17
+:P17 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " ulcers_on_tongue" .
+            
+### http://example.org/disease#P18
+:P18 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " vomiting" .
+            
+### http://example.org/disease#P19
+:P19 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " cough" .
+            
+### http://example.org/disease#P20
+:P20 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " chest_pain" .
+            
+### http://example.org/disease#P21
+:P21 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid fatty spicy food" .
+            
+### http://example.org/disease#P22
+:P22 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid lying down after eating" .
+            
+### http://example.org/disease#P23
+:P23 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "maintain healthy weight" .
+            
+### http://example.org/disease#P24
+:P24 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "exercise" .
+            
+### http://example.org/disease#P25
+:P25 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " yellowish_skin" .
+            
+### http://example.org/disease#P26
+:P26 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " nausea" .
+            
+### http://example.org/disease#P27
+:P27 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " loss_of_appetite" .
+            
+### http://example.org/disease#P28
+:P28 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " abdominal_pain" .
+            
+### http://example.org/disease#P29
+:P29 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " yellowing_of_eyes" .
+            
+### http://example.org/disease#P30
+:P30 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "cold baths" .
+            
+### http://example.org/disease#P31
+:P31 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "anti itch medicine" .
+            
+### http://example.org/disease#P32
+:P32 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consult doctor" .
+            
+### http://example.org/disease#P33
+:P33 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "eat healthy" .
+            
+### http://example.org/disease#P34
+:P34 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " burning_micturition" .
+            
+### http://example.org/disease#P35
+:P35 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " spotting_ urination" .
+            
+### http://example.org/disease#P36
+:P36 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "stop irritation" .
+            
+### http://example.org/disease#P37
+:P37 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consult nearest hospital" .
+            
+### http://example.org/disease#P38
+:P38 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "stop taking drug" .
+            
+### http://example.org/disease#P39
+:P39 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "follow up" .
+            
+### http://example.org/disease#P40
+:P40 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " passage_of_gases" .
+            
+### http://example.org/disease#P41
+:P41 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " internal_itching" .
+            
+### http://example.org/disease#P42
+:P42 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consume probiotic food" .
+            
+### http://example.org/disease#P43
+:P43 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "eliminate milk" .
+            
+### http://example.org/disease#P44
+:P44 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "limit alcohol" .
+            
+### http://example.org/disease#P45
+:P45 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " muscle_wasting" .
+            
+### http://example.org/disease#P46
+:P46 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " patches_in_throat" .
+            
+### http://example.org/disease#P47
+:P47 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " high_fever" .
+            
+### http://example.org/disease#P48
+:P48 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " extra_marital_contacts" .
+            
+### http://example.org/disease#P49
+:P49 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid open cuts" .
+            
+### http://example.org/disease#P50
+:P50 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "wear ppe if possible" .
+            
+### http://example.org/disease#P51
+:P51 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " fatigue" .
+            
+### http://example.org/disease#P52
+:P52 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " weight_loss" .
+            
+### http://example.org/disease#P53
+:P53 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " restlessness" .
+            
+### http://example.org/disease#P54
+:P54 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " lethargy" .
+            
+### http://example.org/disease#P55
+:P55 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " irregular_sugar_level" .
+            
+### http://example.org/disease#P56
+:P56 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " blurred_and_distorted_vision" .
+            
+### http://example.org/disease#P57
+:P57 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " obesity" .
+            
+### http://example.org/disease#P58
+:P58 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " excessive_hunger" .
+            
+### http://example.org/disease#P59
+:P59 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " increased_appetite" .
+            
+### http://example.org/disease#P60
+:P60 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " polyuria" .
+            
+### http://example.org/disease#P61
+:P61 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "have balanced diet" .
+            
+### http://example.org/disease#P62
+:P62 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " sunken_eyes" .
+            
+### http://example.org/disease#P63
+:P63 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " dehydration" .
+            
+### http://example.org/disease#P64
+:P64 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " diarrhoea" .
+            
+### http://example.org/disease#P65
+:P65 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "stop eating solid food for while" .
+            
+### http://example.org/disease#P66
+:P66 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "try taking small sips of water" .
+            
+### http://example.org/disease#P67
+:P67 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "rest" .
+            
+### http://example.org/disease#P68
+:P68 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "ease back into eating" .
+            
+### http://example.org/disease#P69
+:P69 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " breathlessness" .
+            
+### http://example.org/disease#P70
+:P70 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " family_history" .
+            
+### http://example.org/disease#P71
+:P71 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " mucoid_sputum" .
+            
+### http://example.org/disease#P72
+:P72 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "switch to loose cloothing" .
+            
+### http://example.org/disease#P73
+:P73 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take deep breaths" .
+            
+### http://example.org/disease#P74
+:P74 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "get away from trigger" .
+            
+### http://example.org/disease#P75
+:P75 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "seek help" .
+            
+### http://example.org/disease#P76
+:P76 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " headache" .
+            
+### http://example.org/disease#P77
+:P77 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " dizziness" .
+            
+### http://example.org/disease#P78
+:P78 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " loss_of_balance" .
+            
+### http://example.org/disease#P79
+:P79 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " lack_of_concentration" .
+            
+### http://example.org/disease#P80
+:P80 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "meditation" .
+            
+### http://example.org/disease#P81
+:P81 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "salt baths" .
+            
+### http://example.org/disease#P82
+:P82 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "reduce stress" .
+            
+### http://example.org/disease#P83
+:P83 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "get proper sleep" .
+            
+### http://example.org/disease#P84
+:P84 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " indigestion" .
+            
+### http://example.org/disease#P85
+:P85 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " stiff_neck" .
+            
+### http://example.org/disease#P86
+:P86 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " depression" .
+            
+### http://example.org/disease#P87
+:P87 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " irritability" .
+            
+### http://example.org/disease#P88
+:P88 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " visual_disturbances" .
+            
+### http://example.org/disease#P89
+:P89 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use poloroid glasses in sun" .
+            
+### http://example.org/disease#P90
+:P90 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " back_pain" .
+            
+### http://example.org/disease#P91
+:P91 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " weakness_in_limbs" .
+            
+### http://example.org/disease#P92
+:P92 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " neck_pain" .
+            
+### http://example.org/disease#P93
+:P93 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use heating pad or cold pack" .
+            
+### http://example.org/disease#P94
+:P94 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take otc pain reliver" .
+            
+### http://example.org/disease#P95
+:P95 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " weakness_of_one_body_side" .
+            
+### http://example.org/disease#P96
+:P96 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " altered_sensorium" .
+            
+### http://example.org/disease#P97
+:P97 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "massage" .
+            
+### http://example.org/disease#P98
+:P98 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " dark_urine" .
+            
+### http://example.org/disease#P99
+:P99 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "drink plenty of water" .
+            
+### http://example.org/disease#P100
+:P100 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consume milk thistle" .
+            
+### http://example.org/disease#P101
+:P101 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "eat fruits and high fiberous food" .
+            
+### http://example.org/disease#P102
+:P102 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "medication" .
+            
+### http://example.org/disease#P103
+:P103 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " sweating" .
+            
+### http://example.org/disease#P104
+:P104 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " muscle_pain" .
+            
+### http://example.org/disease#P105
+:P105 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "Consult nearest hospital" .
+            
+### http://example.org/disease#P106
+:P106 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid oily food" .
+            
+### http://example.org/disease#P107
+:P107 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid non veg food" .
+            
+### http://example.org/disease#P108
+:P108 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep mosquitos out" .
+            
+### http://example.org/disease#P109
+:P109 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " mild_fever" .
+            
+### http://example.org/disease#P110
+:P110 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swelled_lymph_nodes" .
+            
+### http://example.org/disease#P111
+:P111 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " malaise" .
+            
+### http://example.org/disease#P112
+:P112 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " red_spots_over_body" .
+            
+### http://example.org/disease#P113
+:P113 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use neem in bathing " .
+            
+### http://example.org/disease#P114
+:P114 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consume neem leaves" .
+            
+### http://example.org/disease#P115
+:P115 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take vaccine" .
+            
+### http://example.org/disease#P116
+:P116 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid public places" .
+            
+### http://example.org/disease#P117
+:P117 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " joint_pain" .
+            
+### http://example.org/disease#P118
+:P118 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " pain_behind_the_eyes" .
+            
+### http://example.org/disease#P119
+:P119 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "drink papaya leaf juice" .
+            
+### http://example.org/disease#P120
+:P120 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep mosquitos away" .
+            
+### http://example.org/disease#P121
+:P121 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep hydrated" .
+            
+### http://example.org/disease#P122
+:P122 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " constipation" .
+            
+### http://example.org/disease#P123
+:P123 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " toxic_look_(typhos)" .
+            
+### http://example.org/disease#P124
+:P124 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " belly_pain" .
+            
+### http://example.org/disease#P125
+:P125 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "eat high calorie vegitables" .
+            
+### http://example.org/disease#P126
+:P126 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "antiboitic therapy" .
+            
+### http://example.org/disease#P127
+:P127 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "wash hands through" .
+            
+### http://example.org/disease#P128
+:P128 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " yellow_urine" .
+            
+### http://example.org/disease#P129
+:P129 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " receiving_blood_transfusion" .
+            
+### http://example.org/disease#P130
+:P130 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " receiving_unsterile_injections" .
+            
+### http://example.org/disease#P131
+:P131 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "vaccination" .
+            
+### http://example.org/disease#P132
+:P132 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " coma" .
+            
+### http://example.org/disease#P133
+:P133 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " stomach_bleeding" .
+            
+### http://example.org/disease#P134
+:P134 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "stop alcohol consumption" .
+            
+### http://example.org/disease#P135
+:P135 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swelling_of_stomach" .
+            
+### http://example.org/disease#P136
+:P136 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " distention_of_abdomen" .
+            
+### http://example.org/disease#P137
+:P137 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " history_of_alcohol_consumption" .
+            
+### http://example.org/disease#P138
+:P138 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " fluid_overload" .
+            
+### http://example.org/disease#P139
+:P139 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " phlegm" .
+            
+### http://example.org/disease#P140
+:P140 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " blood_in_sputum" .
+            
+### http://example.org/disease#P141
+:P141 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "cover mouth" .
+            
+### http://example.org/disease#P142
+:P142 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " throat_irritation" .
+            
+### http://example.org/disease#P143
+:P143 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " redness_of_eyes" .
+            
+### http://example.org/disease#P144
+:P144 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " sinus_pressure" .
+            
+### http://example.org/disease#P145
+:P145 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " runny_nose" .
+            
+### http://example.org/disease#P146
+:P146 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " congestion" .
+            
+### http://example.org/disease#P147
+:P147 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " loss_of_smell" .
+            
+### http://example.org/disease#P148
+:P148 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "drink vitamin c rich drinks" .
+            
+### http://example.org/disease#P149
+:P149 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take vapour" .
+            
+### http://example.org/disease#P150
+:P150 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid cold food" .
+            
+### http://example.org/disease#P151
+:P151 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep fever in check" .
+            
+### http://example.org/disease#P152
+:P152 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " fast_heart_rate" .
+            
+### http://example.org/disease#P153
+:P153 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " rusty_sputum" .
+            
+### http://example.org/disease#P154
+:P154 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " pain_during_bowel_movements" .
+            
+### http://example.org/disease#P155
+:P155 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " pain_in_anal_region" .
+            
+### http://example.org/disease#P156
+:P156 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " bloody_stool" .
+            
+### http://example.org/disease#P157
+:P157 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " irritation_in_anus" .
+            
+### http://example.org/disease#P158
+:P158 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consume witch hazel" .
+            
+### http://example.org/disease#P159
+:P159 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "warm bath with epsom salt" .
+            
+### http://example.org/disease#P160
+:P160 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "consume alovera juice" .
+            
+### http://example.org/disease#P161
+:P161 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "call ambulance" .
+            
+### http://example.org/disease#P162
+:P162 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "chew or swallow asprin" .
+            
+### http://example.org/disease#P163
+:P163 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "keep calm" .
+            
+### http://example.org/disease#P164
+:P164 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " cramps" .
+            
+### http://example.org/disease#P165
+:P165 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " bruising" .
+            
+### http://example.org/disease#P166
+:P166 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swollen_legs" .
+            
+### http://example.org/disease#P167
+:P167 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swollen_blood_vessels" .
+            
+### http://example.org/disease#P168
+:P168 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " prominent_veins_on_calf" .
+            
+### http://example.org/disease#P169
+:P169 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "lie down flat and raise the leg high" .
+            
+### http://example.org/disease#P170
+:P170 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use oinments" .
+            
+### http://example.org/disease#P171
+:P171 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use vein compression" .
+            
+### http://example.org/disease#P172
+:P172 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "dont stand still for long" .
+            
+### http://example.org/disease#P173
+:P173 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " weight_gain" .
+            
+### http://example.org/disease#P174
+:P174 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " cold_hands_and_feets" .
+            
+### http://example.org/disease#P175
+:P175 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " mood_swings" .
+            
+### http://example.org/disease#P176
+:P176 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " puffy_face_and_eyes" .
+            
+### http://example.org/disease#P177
+:P177 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " enlarged_thyroid" .
+            
+### http://example.org/disease#P178
+:P178 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " brittle_nails" .
+            
+### http://example.org/disease#P179
+:P179 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swollen_extremeties" .
+            
+### http://example.org/disease#P180
+:P180 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " abnormal_menstruation" .
+            
+### http://example.org/disease#P181
+:P181 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " muscle_weakness" .
+            
+### http://example.org/disease#P182
+:P182 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use lemon balm" .
+            
+### http://example.org/disease#P183
+:P183 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take radioactive iodine treatment" .
+            
+### http://example.org/disease#P184
+:P184 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " anxiety" .
+            
+### http://example.org/disease#P185
+:P185 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " slurred_speech" .
+            
+### http://example.org/disease#P186
+:P186 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " palpitations" .
+            
+### http://example.org/disease#P187
+:P187 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "lie down on side" .
+            
+### http://example.org/disease#P188
+:P188 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "check in pulse" .
+            
+### http://example.org/disease#P189
+:P189 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "drink sugary drinks" .
+            
+### http://example.org/disease#P190
+:P190 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " knee_pain" .
+            
+### http://example.org/disease#P191
+:P191 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " hip_joint_pain" .
+            
+### http://example.org/disease#P192
+:P192 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " swelling_joints" .
+            
+### http://example.org/disease#P193
+:P193 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " painful_walking" .
+            
+### http://example.org/disease#P194
+:P194 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "acetaminophen" .
+            
+### http://example.org/disease#P195
+:P195 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " movement_stiffness" .
+            
+### http://example.org/disease#P196
+:P196 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use hot and cold therapy" .
+            
+### http://example.org/disease#P197
+:P197 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "try acupuncture" .
+            
+### http://example.org/disease#P198
+:P198 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " spinning_movements" .
+            
+### http://example.org/disease#P199
+:P199 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " unsteadiness" .
+            
+### http://example.org/disease#P200
+:P200 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "lie down" .
+            
+### http://example.org/disease#P201
+:P201 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid sudden change in body" .
+            
+### http://example.org/disease#P202
+:P202 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid abrupt head movment" .
+            
+### http://example.org/disease#P203
+:P203 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "relax" .
+            
+### http://example.org/disease#P204
+:P204 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " pus_filled_pimples" .
+            
+### http://example.org/disease#P205
+:P205 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " blackheads" .
+            
+### http://example.org/disease#P206
+:P206 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " scurring" .
+            
+### http://example.org/disease#P207
+:P207 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "avoid too many products" .
+            
+### http://example.org/disease#P208
+:P208 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " bladder_discomfort" .
+            
+### http://example.org/disease#P209
+:P209 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " foul_smell_of urine" .
+            
+### http://example.org/disease#P210
+:P210 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " continuous_feel_of_urine" .
+            
+### http://example.org/disease#P211
+:P211 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "increase vitamin c intake" .
+            
+### http://example.org/disease#P212
+:P212 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "drink cranberry juice" .
+            
+### http://example.org/disease#P213
+:P213 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "take probiotics" .
+            
+### http://example.org/disease#P214
+:P214 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " skin_peeling" .
+            
+### http://example.org/disease#P215
+:P215 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " silver_like_dusting" .
+            
+### http://example.org/disease#P216
+:P216 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " small_dents_in_nails" .
+            
+### http://example.org/disease#P217
+:P217 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " inflammatory_nails" .
+            
+### http://example.org/disease#P218
+:P218 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "wash hands with warm soapy water" .
+            
+### http://example.org/disease#P219
+:P219 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "stop bleeding using pressure" .
+            
+### http://example.org/disease#P220
+:P220 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " blister" .
+            
+### http://example.org/disease#P221
+:P221 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " red_sore_around_nose" .
+            
+### http://example.org/disease#P222
+:P222 rdf:type owl:NamedIndividual , :Treatment ;
+    :name " yellow_crust_ooze" .
+            
+### http://example.org/disease#P223
+:P223 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "soak affected area in warm water" .
+            
+### http://example.org/disease#P224
+:P224 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "use antibiotics" .
+            
+### http://example.org/disease#P225
+:P225 rdf:type owl:NamedIndividual , :Treatment ;
+    :name "remove scabs with wet compressed cloth" .
+            

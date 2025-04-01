@@ -1,0 +1,1084 @@
+
+@prefix : <http://example.org/disease/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/disease> rdf:type owl:Ontology .
+
+
+### http://example.org/disease#D0
+:D0 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Fungal infection" ;
+    :description "In humans, fungal infections occur when an invading fungus takes over an area of the body and is too much for the immune system to handle. Fungi can live in the air, soil, water, and plants. There are also some fungi that live naturally in the human body. Like many microbes, there are helpful fungi and harmful fungi." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S2 ;
+    :hasSymptom :S3 ;
+
+            
+### http://example.org/disease#D1
+:D1 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Allergy" ;
+    :description "An allergy is an immune system response to a foreign substance that's not typically harmful to your body.They can include certain foods, pollen, or pet dander. Your immune system's job is to keep you healthy by fighting harmful pathogens." ;
+        :hasSymptom :S4 ;
+    :hasSymptom :S5 ;
+    :hasSymptom :S6 ;
+    :hasSymptom :S7 ;
+
+            
+### http://example.org/disease#D2
+:D2 rdf:type owl:NamedIndividual , :Disease ;
+    :name "GERD" ;
+    :description "Gastroesophageal reflux disease, or GERD, is a digestive disorder that affects the lower esophageal sphincter (LES), the ring of muscle between the esophagus and stomach. Many people, including pregnant women, suffer from heartburn or acid indigestion caused by GERD." ;
+        :hasSymptom :S8 ;
+    :hasSymptom :S9 ;
+    :hasSymptom :S10 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S12 ;
+    :hasSymptom :S13 ;
+
+            
+### http://example.org/disease#D3
+:D3 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Chronic cholestasis" ;
+    :description "Chronic cholestatic diseases, whether occurring in infancy, childhood or adulthood, are characterized by defective bile acid transport from the liver to the intestine, which is caused by primary damage to the biliary epithelium in most cases" ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S18 ;
+
+            
+### http://example.org/disease#D4
+:D4 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Drug Reaction" ;
+    :description "An adverse drug reaction (ADR) is an injury caused by taking medication. ADRs may occur following a single dose or prolonged administration of a drug or result from the combination of two or more drugs." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S8 ;
+    :hasSymptom :S19 ;
+    :hasSymptom :S20 ;
+
+            
+### http://example.org/disease#D5
+:D5 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Peptic ulcer diseae" ;
+    :description "Peptic ulcer disease (PUD) is a break in the inner lining of the stomach, the first part of the small intestine, or sometimes the lower esophagus. An ulcer in the stomach is called a gastric ulcer, while one in the first part of the intestines is a duodenal ulcer." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S21 ;
+    :hasSymptom :S22 ;
+
+            
+### http://example.org/disease#D6
+:D6 rdf:type owl:NamedIndividual , :Disease ;
+    :name "AIDS" ;
+    :description "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). By damaging your immune system, HIV interferes with your body's ability to fight infection and disease." ;
+        :hasSymptom :S23 ;
+    :hasSymptom :S24 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S26 ;
+
+            
+### http://example.org/disease#D7
+:D7 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Diabetes " ;
+    :description "No description available." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S30 ;
+    :hasSymptom :S31 ;
+    :hasSymptom :S32 ;
+    :hasSymptom :S33 ;
+    :hasSymptom :S34 ;
+    :hasSymptom :S35 ;
+    :hasSymptom :S36 ;
+
+            
+### http://example.org/disease#D8
+:D8 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Gastroenteritis" ;
+    :description "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach, and large and small intestines. Viral and bacterial gastroenteritis are intestinal infections associated with symptoms of diarrhea , abdominal cramps, nausea , and vomiting ." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S37 ;
+    :hasSymptom :S38 ;
+    :hasSymptom :S39 ;
+
+            
+### http://example.org/disease#D9
+:D9 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Bronchial Asthma" ;
+    :description "Bronchial asthma is a medical condition which causes the airway path of the lungs to swell and narrow. Due to this swelling, the air path produces excess mucus making it hard to breathe, which results in coughing, short breath, and wheezing. The disease is chronic and interferes with daily working." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S12 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S40 ;
+    :hasSymptom :S41 ;
+    :hasSymptom :S42 ;
+
+            
+### http://example.org/disease#D10
+:D10 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypertension " ;
+    :description "No description available." ;
+        :hasSymptom :S43 ;
+    :hasSymptom :S13 ;
+    :hasSymptom :S44 ;
+    :hasSymptom :S45 ;
+    :hasSymptom :S46 ;
+
+            
+### http://example.org/disease#D11
+:D11 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Migraine" ;
+    :description "A migraine can cause severe throbbing pain or a pulsing sensation, usually on one side of the head. It's often accompanied by nausea, vomiting, and extreme sensitivity to light and sound. Migraine attacks can last for hours to days, and the pain can be so severe that it interferes with your daily activities." ;
+        :hasSymptom :S9 ;
+    :hasSymptom :S47 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S32 ;
+    :hasSymptom :S34 ;
+    :hasSymptom :S48 ;
+    :hasSymptom :S49 ;
+    :hasSymptom :S50 ;
+    :hasSymptom :S51 ;
+
+            
+### http://example.org/disease#D12
+:D12 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Cervical spondylosis" ;
+    :description "Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck. As the disks dehydrate and shrink, signs of osteoarthritis develop, including bony projections along the edges of bones (bone spurs)." ;
+        :hasSymptom :S52 ;
+    :hasSymptom :S53 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S44 ;
+    :hasSymptom :S45 ;
+
+            
+### http://example.org/disease#D13
+:D13 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Paralysis (brain hemorrhage)" ;
+    :description "Intracerebral hemorrhage (ICH) is when blood suddenly bursts into brain tissue, causing damage to your brain. Symptoms usually appear suddenly during ICH. They include headache, weakness, confusion, and paralysis, particularly on one side of your body." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S55 ;
+    :hasSymptom :S56 ;
+
+            
+### http://example.org/disease#D14
+:D14 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Jaundice" ;
+    :description "Yellow staining of the skin and sclerae (the whites of the eyes) by abnormally high blood levels of the bile pigment bilirubin. The yellowing extends to other tissues and body fluids. Jaundice was once called the morbus regius (the regal disease) in the belief that only the touch of a king could cure it" ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S17 ;
+
+            
+### http://example.org/disease#D15
+:D15 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Malaria" ;
+    :description "An infectious disease caused by protozoan parasites from the Plasmodium family that can be transmitted by the bite of the Anopheles mosquito or by a contaminated needle or transfusion. Falciparum malaria is the most deadly type." ;
+        :hasSymptom :S6 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S59 ;
+
+            
+### http://example.org/disease#D16
+:D16 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Chicken pox" ;
+    :description "Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S1 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S30 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S60 ;
+    :hasSymptom :S61 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S63 ;
+
+            
+### http://example.org/disease#D17
+:D17 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Dengue" ;
+    :description "an acute infectious disease caused by a flavivirus (species Dengue virus of the genus Flavivirus), transmitted by aedes mosquitoes, and characterized by headache, severe joint pain, and a rash. — called also breakbone fever, dengue fever." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S6 ;
+    :hasSymptom :S64 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S65 ;
+    :hasSymptom :S52 ;
+    :hasSymptom :S59 ;
+    :hasSymptom :S63 ;
+
+            
+### http://example.org/disease#D18
+:D18 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Typhoid" ;
+    :description "An acute illness characterized by fever caused by infection with the bacterium Salmonella typhi. Typhoid fever has an insidious onset, with fever, headache, constipation, malaise, chills, and muscle pain. Diarrhea is uncommon, and vomiting is not usually severe." ;
+        :hasSymptom :S6 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S66 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S39 ;
+    :hasSymptom :S67 ;
+    :hasSymptom :S68 ;
+
+            
+### http://example.org/disease#D19
+:D19 rdf:type owl:NamedIndividual , :Disease ;
+    :name "hepatitis A" ;
+    :description "Hepatitis A is a highly contagious liver infection caused by the hepatitis A virus. The virus is one of several types of hepatitis viruses that cause inflammation and affect your liver's ability to function." ;
+        :hasSymptom :S64 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S39 ;
+    :hasSymptom :S60 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S59 ;
+
+            
+### http://example.org/disease#D20
+:D20 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis B" ;
+    :description "Hepatitis B is an infection of your liver. It can cause scarring of the organ, liver failure, and cancer. It can be fatal if it isn't treated. It's spread when people come in contact with the blood, open sores, or body fluids of someone who has the hepatitis B virus." ;
+        :hasSymptom :S0 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S30 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S69 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S70 ;
+    :hasSymptom :S71 ;
+
+            
+### http://example.org/disease#D21
+:D21 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis C" ;
+    :description "Inflammation of the liver due to the hepatitis C virus (HCV), which is usually spread via blood transfusion (rare), hemodialysis, and needle sticks. The damage hepatitis C does to the liver can lead to cirrhosis and its complications as well as cancer." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S41 ;
+
+            
+### http://example.org/disease#D22
+:D22 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis D" ;
+    :description "Hepatitis D, also known as the hepatitis delta virus, is an infection that causes the liver to become inflamed. This swelling can impair liver function and cause long-term liver problems, including liver scarring and cancer. The condition is caused by the hepatitis D virus (HDV)." ;
+        :hasSymptom :S64 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S18 ;
+
+            
+### http://example.org/disease#D23
+:D23 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hepatitis E" ;
+    :description "A rare form of liver inflammation caused by infection with the hepatitis E virus (HEV). It is transmitted via food or drink handled by an infected person or through infected water supplies in areas where fecal matter may get into the water. Hepatitis E does not cause chronic liver disease." ;
+        :hasSymptom :S64 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S57 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S72 ;
+    :hasSymptom :S73 ;
+
+            
+### http://example.org/disease#D24
+:D24 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Alcoholic hepatitis" ;
+    :description "Alcoholic hepatitis is a diseased, inflammatory condition of the liver caused by heavy alcohol consumption over an extended period of time. It's also aggravated by binge drinking and ongoing alcohol use. If you develop this condition, you must stop drinking alcohol" ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S14 ;
+    :hasSymptom :S17 ;
+    :hasSymptom :S74 ;
+    :hasSymptom :S75 ;
+    :hasSymptom :S76 ;
+    :hasSymptom :S77 ;
+
+            
+### http://example.org/disease#D25
+:D25 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Tuberculosis" ;
+    :description "Tuberculosis (TB) is an infectious disease usually caused by Mycobacterium tuberculosis (MTB) bacteria. Tuberculosis generally affects the lungs, but can also affect other parts of the body. Most infections show no symptoms, in which case it is known as latent tuberculosis." ;
+        :hasSymptom :S6 ;
+    :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S12 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S40 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S16 ;
+    :hasSymptom :S60 ;
+    :hasSymptom :S18 ;
+    :hasSymptom :S61 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S78 ;
+    :hasSymptom :S13 ;
+    :hasSymptom :S79 ;
+
+            
+### http://example.org/disease#D26
+:D26 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Common Cold" ;
+    :description "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold." ;
+        :hasSymptom :S4 ;
+    :hasSymptom :S6 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S12 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S61 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S78 ;
+    :hasSymptom :S80 ;
+    :hasSymptom :S81 ;
+    :hasSymptom :S82 ;
+    :hasSymptom :S83 ;
+    :hasSymptom :S84 ;
+    :hasSymptom :S13 ;
+    :hasSymptom :S85 ;
+    :hasSymptom :S59 ;
+
+            
+### http://example.org/disease#D27
+:D27 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Pneumonia" ;
+    :description "Pneumonia is an infection in one or both lungs. Bacteria, viruses, and fungi cause it. The infection causes inflammation in the air sacs in your lungs, which are called alveoli. The alveoli fill with fluid or pus, making it difficult to breathe." ;
+        :hasSymptom :S6 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S12 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S40 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S62 ;
+    :hasSymptom :S13 ;
+    :hasSymptom :S86 ;
+    :hasSymptom :S87 ;
+
+            
+### http://example.org/disease#D28
+:D28 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Dimorphic hemmorhoids(piles)" ;
+    :description "No description available." ;
+        :hasSymptom :S66 ;
+    :hasSymptom :S88 ;
+    :hasSymptom :S89 ;
+    :hasSymptom :S90 ;
+    :hasSymptom :S91 ;
+
+            
+### http://example.org/disease#D29
+:D29 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Heart attack" ;
+    :description "The death of heart muscle due to the loss of blood supply. The loss of blood supply is usually caused by a complete blockage of a coronary artery, one of the arteries that supplies blood to the heart muscle." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S40 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S13 ;
+
+            
+### http://example.org/disease#D30
+:D30 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Varicose veins" ;
+    :description "A vein that has enlarged and twisted, often appearing as a bulging, blue blood vessel that is clearly visible through the skin. Varicose veins are most common in older adults, particularly women, and occur especially on the legs." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S92 ;
+    :hasSymptom :S93 ;
+    :hasSymptom :S33 ;
+    :hasSymptom :S94 ;
+    :hasSymptom :S95 ;
+    :hasSymptom :S96 ;
+
+            
+### http://example.org/disease#D31
+:D31 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypothyroidism" ;
+    :description "Hypothyroidism, also called underactive thyroid or low thyroid, is a disorder of the endocrine system in which the thyroid gland does not produce enough thyroid hormone." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S97 ;
+    :hasSymptom :S98 ;
+    :hasSymptom :S99 ;
+    :hasSymptom :S30 ;
+    :hasSymptom :S44 ;
+    :hasSymptom :S100 ;
+    :hasSymptom :S101 ;
+    :hasSymptom :S102 ;
+    :hasSymptom :S103 ;
+    :hasSymptom :S49 ;
+    :hasSymptom :S50 ;
+    :hasSymptom :S104 ;
+
+            
+### http://example.org/disease#D32
+:D32 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hyperthyroidism" ;
+    :description "Hyperthyroidism (overactive thyroid) occurs when your thyroid gland produces too much of the hormone thyroxine. Hyperthyroidism can accelerate your body's metabolism, causing unintentional weight loss and a rapid or irregular heartbeat." ;
+        :hasSymptom :S27 ;
+    :hasSymptom :S99 ;
+    :hasSymptom :S28 ;
+    :hasSymptom :S29 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S39 ;
+    :hasSymptom :S86 ;
+    :hasSymptom :S34 ;
+    :hasSymptom :S105 ;
+    :hasSymptom :S50 ;
+    :hasSymptom :S104 ;
+
+            
+### http://example.org/disease#D33
+:D33 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Hypoglycemia" ;
+    :description " Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than normal. Glucose is your body's main energy source. Hypoglycemia is often related to diabetes treatment. But other drugs and a variety of conditions — many rare — can cause low blood sugar in people who don't have diabetes." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S27 ;
+    :hasSymptom :S106 ;
+    :hasSymptom :S58 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S32 ;
+    :hasSymptom :S34 ;
+    :hasSymptom :S107 ;
+    :hasSymptom :S50 ;
+    :hasSymptom :S108 ;
+
+            
+### http://example.org/disease#D34
+:D34 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Osteoarthristis" ;
+    :description "Osteoarthritis is the most common form of arthritis, affecting millions of people worldwide. It occurs when the protective cartilage that cushions the ends of your bones wears down over time." ;
+        :hasSymptom :S64 ;
+    :hasSymptom :S54 ;
+    :hasSymptom :S109 ;
+    :hasSymptom :S110 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S112 ;
+
+            
+### http://example.org/disease#D35
+:D35 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Arthritis" ;
+    :description "Arthritis is the swelling and tenderness of one or more of your joints. The main symptoms of arthritis are joint pain and stiffness, which typically worsen with age. The most common types of arthritis are osteoarthritis and rheumatoid arthritis." ;
+        :hasSymptom :S105 ;
+    :hasSymptom :S48 ;
+    :hasSymptom :S111 ;
+    :hasSymptom :S113 ;
+    :hasSymptom :S112 ;
+
+            
+### http://example.org/disease#D36
+:D36 rdf:type owl:NamedIndividual , :Disease ;
+    :name "(vertigo) Paroymsal  Positional Vertigo" ;
+    :description "Benign paroxysmal positional vertigo (BPPV) is one of the most common causes of vertigo — the sudden sensation that you're spinning or that the inside of your head is spinning. Benign paroxysmal positional vertigo causes brief episodes of mild to intense dizziness." ;
+        :hasSymptom :S11 ;
+    :hasSymptom :S43 ;
+    :hasSymptom :S15 ;
+    :hasSymptom :S114 ;
+    :hasSymptom :S45 ;
+    :hasSymptom :S115 ;
+
+            
+### http://example.org/disease#D37
+:D37 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Acne" ;
+    :description "Acne vulgaris is the formation of comedones, papules, pustules, nodules, and/or cysts as a result of obstruction and inflammation of pilosebaceous units (hair follicles and their accompanying sebaceous gland). Acne develops on the face and upper trunk. It most often affects adolescents." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S116 ;
+    :hasSymptom :S117 ;
+    :hasSymptom :S118 ;
+
+            
+### http://example.org/disease#D38
+:D38 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Urinary tract infection" ;
+    :description "Urinary tract infection: An infection of the kidney, ureter, bladder, or urethra. Abbreviated UTI. Not everyone with a UTI has symptoms, but common symptoms include a frequent urge to urinate and pain or burning when urinating." ;
+        :hasSymptom :S19 ;
+    :hasSymptom :S119 ;
+    :hasSymptom :S120 ;
+    :hasSymptom :S121 ;
+
+            
+### http://example.org/disease#D39
+:D39 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Psoriasis" ;
+    :description "Psoriasis is a common skin disorder that forms thick, red, bumpy patches covered with silvery scales. They can pop up anywhere, but most appear on the scalp, elbows, knees, and lower back. Psoriasis can't be passed from person to person. It does sometimes happen in members of the same family." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S64 ;
+    :hasSymptom :S122 ;
+    :hasSymptom :S123 ;
+    :hasSymptom :S124 ;
+    :hasSymptom :S125 ;
+
+            
+### http://example.org/disease#D40
+:D40 rdf:type owl:NamedIndividual , :Disease ;
+    :name "Impetigo" ;
+    :description "Impetigo (im-puh-TIE-go) is a common and highly contagious skin infection that mainly affects infants and children. Impetigo usually appears as red sores on the face, especially around a child's nose and mouth, and on hands and feet. The sores burst and develop honey-colored crusts." ;
+        :hasSymptom :S1 ;
+    :hasSymptom :S25 ;
+    :hasSymptom :S126 ;
+    :hasSymptom :S127 ;
+    :hasSymptom :S128 ;
+
+            
+### http://example.org/disease#S0
+:S0 rdf:type owl:NamedIndividual , :Symptom ;
+    :name "itching" .
+            
+### http://example.org/disease#S1
+:S1 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " skin_rash" .
+            
+### http://example.org/disease#S2
+:S2 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " nodal_skin_eruptions" .
+            
+### http://example.org/disease#S3
+:S3 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dischromic _patches" .
+            
+### http://example.org/disease#S4
+:S4 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " continuous_sneezing" .
+            
+### http://example.org/disease#S5
+:S5 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " shivering" .
+            
+### http://example.org/disease#S6
+:S6 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " chills" .
+            
+### http://example.org/disease#S7
+:S7 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " watering_from_eyes" .
+            
+### http://example.org/disease#S8
+:S8 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stomach_pain" .
+            
+### http://example.org/disease#S9
+:S9 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " acidity" .
+            
+### http://example.org/disease#S10
+:S10 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " ulcers_on_tongue" .
+            
+### http://example.org/disease#S11
+:S11 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " vomiting" .
+            
+### http://example.org/disease#S12
+:S12 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cough" .
+            
+### http://example.org/disease#S13
+:S13 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " chest_pain" .
+            
+### http://example.org/disease#S14
+:S14 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellowish_skin" .
+            
+### http://example.org/disease#S15
+:S15 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " nausea" .
+            
+### http://example.org/disease#S16
+:S16 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_appetite" .
+            
+### http://example.org/disease#S17
+:S17 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " abdominal_pain" .
+            
+### http://example.org/disease#S18
+:S18 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellowing_of_eyes" .
+            
+### http://example.org/disease#S19
+:S19 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " burning_micturition" .
+            
+### http://example.org/disease#S20
+:S20 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " spotting_ urination" .
+            
+### http://example.org/disease#S21
+:S21 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " passage_of_gases" .
+            
+### http://example.org/disease#S22
+:S22 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " internal_itching" .
+            
+### http://example.org/disease#S23
+:S23 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_wasting" .
+            
+### http://example.org/disease#S24
+:S24 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " patches_in_throat" .
+            
+### http://example.org/disease#S25
+:S25 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " high_fever" .
+            
+### http://example.org/disease#S26
+:S26 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " extra_marital_contacts" .
+            
+### http://example.org/disease#S27
+:S27 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fatigue" .
+            
+### http://example.org/disease#S28
+:S28 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weight_loss" .
+            
+### http://example.org/disease#S29
+:S29 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " restlessness" .
+            
+### http://example.org/disease#S30
+:S30 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " lethargy" .
+            
+### http://example.org/disease#S31
+:S31 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irregular_sugar_level" .
+            
+### http://example.org/disease#S32
+:S32 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blurred_and_distorted_vision" .
+            
+### http://example.org/disease#S33
+:S33 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " obesity" .
+            
+### http://example.org/disease#S34
+:S34 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " excessive_hunger" .
+            
+### http://example.org/disease#S35
+:S35 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " increased_appetite" .
+            
+### http://example.org/disease#S36
+:S36 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " polyuria" .
+            
+### http://example.org/disease#S37
+:S37 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sunken_eyes" .
+            
+### http://example.org/disease#S38
+:S38 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dehydration" .
+            
+### http://example.org/disease#S39
+:S39 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " diarrhoea" .
+            
+### http://example.org/disease#S40
+:S40 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " breathlessness" .
+            
+### http://example.org/disease#S41
+:S41 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " family_history" .
+            
+### http://example.org/disease#S42
+:S42 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mucoid_sputum" .
+            
+### http://example.org/disease#S43
+:S43 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " headache" .
+            
+### http://example.org/disease#S44
+:S44 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dizziness" .
+            
+### http://example.org/disease#S45
+:S45 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_balance" .
+            
+### http://example.org/disease#S46
+:S46 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " lack_of_concentration" .
+            
+### http://example.org/disease#S47
+:S47 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " indigestion" .
+            
+### http://example.org/disease#S48
+:S48 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stiff_neck" .
+            
+### http://example.org/disease#S49
+:S49 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " depression" .
+            
+### http://example.org/disease#S50
+:S50 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irritability" .
+            
+### http://example.org/disease#S51
+:S51 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " visual_disturbances" .
+            
+### http://example.org/disease#S52
+:S52 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " back_pain" .
+            
+### http://example.org/disease#S53
+:S53 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weakness_in_limbs" .
+            
+### http://example.org/disease#S54
+:S54 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " neck_pain" .
+            
+### http://example.org/disease#S55
+:S55 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weakness_of_one_body_side" .
+            
+### http://example.org/disease#S56
+:S56 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " altered_sensorium" .
+            
+### http://example.org/disease#S57
+:S57 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " dark_urine" .
+            
+### http://example.org/disease#S58
+:S58 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sweating" .
+            
+### http://example.org/disease#S59
+:S59 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_pain" .
+            
+### http://example.org/disease#S60
+:S60 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mild_fever" .
+            
+### http://example.org/disease#S61
+:S61 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelled_lymph_nodes" .
+            
+### http://example.org/disease#S62
+:S62 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " malaise" .
+            
+### http://example.org/disease#S63
+:S63 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " red_spots_over_body" .
+            
+### http://example.org/disease#S64
+:S64 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " joint_pain" .
+            
+### http://example.org/disease#S65
+:S65 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_behind_the_eyes" .
+            
+### http://example.org/disease#S66
+:S66 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " constipation" .
+            
+### http://example.org/disease#S67
+:S67 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " toxic_look_(typhos)" .
+            
+### http://example.org/disease#S68
+:S68 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " belly_pain" .
+            
+### http://example.org/disease#S69
+:S69 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellow_urine" .
+            
+### http://example.org/disease#S70
+:S70 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " receiving_blood_transfusion" .
+            
+### http://example.org/disease#S71
+:S71 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " receiving_unsterile_injections" .
+            
+### http://example.org/disease#S72
+:S72 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " coma" .
+            
+### http://example.org/disease#S73
+:S73 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " stomach_bleeding" .
+            
+### http://example.org/disease#S74
+:S74 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelling_of_stomach" .
+            
+### http://example.org/disease#S75
+:S75 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " distention_of_abdomen" .
+            
+### http://example.org/disease#S76
+:S76 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " history_of_alcohol_consumption" .
+            
+### http://example.org/disease#S77
+:S77 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fluid_overload" .
+            
+### http://example.org/disease#S78
+:S78 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " phlegm" .
+            
+### http://example.org/disease#S79
+:S79 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blood_in_sputum" .
+            
+### http://example.org/disease#S80
+:S80 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " throat_irritation" .
+            
+### http://example.org/disease#S81
+:S81 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " redness_of_eyes" .
+            
+### http://example.org/disease#S82
+:S82 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " sinus_pressure" .
+            
+### http://example.org/disease#S83
+:S83 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " runny_nose" .
+            
+### http://example.org/disease#S84
+:S84 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " congestion" .
+            
+### http://example.org/disease#S85
+:S85 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " loss_of_smell" .
+            
+### http://example.org/disease#S86
+:S86 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " fast_heart_rate" .
+            
+### http://example.org/disease#S87
+:S87 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " rusty_sputum" .
+            
+### http://example.org/disease#S88
+:S88 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_during_bowel_movements" .
+            
+### http://example.org/disease#S89
+:S89 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pain_in_anal_region" .
+            
+### http://example.org/disease#S90
+:S90 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bloody_stool" .
+            
+### http://example.org/disease#S91
+:S91 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " irritation_in_anus" .
+            
+### http://example.org/disease#S92
+:S92 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cramps" .
+            
+### http://example.org/disease#S93
+:S93 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bruising" .
+            
+### http://example.org/disease#S94
+:S94 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_legs" .
+            
+### http://example.org/disease#S95
+:S95 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_blood_vessels" .
+            
+### http://example.org/disease#S96
+:S96 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " prominent_veins_on_calf" .
+            
+### http://example.org/disease#S97
+:S97 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " weight_gain" .
+            
+### http://example.org/disease#S98
+:S98 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " cold_hands_and_feets" .
+            
+### http://example.org/disease#S99
+:S99 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " mood_swings" .
+            
+### http://example.org/disease#S100
+:S100 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " puffy_face_and_eyes" .
+            
+### http://example.org/disease#S101
+:S101 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " enlarged_thyroid" .
+            
+### http://example.org/disease#S102
+:S102 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " brittle_nails" .
+            
+### http://example.org/disease#S103
+:S103 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swollen_extremeties" .
+            
+### http://example.org/disease#S104
+:S104 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " abnormal_menstruation" .
+            
+### http://example.org/disease#S105
+:S105 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " muscle_weakness" .
+            
+### http://example.org/disease#S106
+:S106 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " anxiety" .
+            
+### http://example.org/disease#S107
+:S107 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " slurred_speech" .
+            
+### http://example.org/disease#S108
+:S108 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " palpitations" .
+            
+### http://example.org/disease#S109
+:S109 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " knee_pain" .
+            
+### http://example.org/disease#S110
+:S110 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " hip_joint_pain" .
+            
+### http://example.org/disease#S111
+:S111 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " swelling_joints" .
+            
+### http://example.org/disease#S112
+:S112 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " painful_walking" .
+            
+### http://example.org/disease#S113
+:S113 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " movement_stiffness" .
+            
+### http://example.org/disease#S114
+:S114 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " spinning_movements" .
+            
+### http://example.org/disease#S115
+:S115 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " unsteadiness" .
+            
+### http://example.org/disease#S116
+:S116 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " pus_filled_pimples" .
+            
+### http://example.org/disease#S117
+:S117 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blackheads" .
+            
+### http://example.org/disease#S118
+:S118 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " scurring" .
+            
+### http://example.org/disease#S119
+:S119 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " bladder_discomfort" .
+            
+### http://example.org/disease#S120
+:S120 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " foul_smell_of urine" .
+            
+### http://example.org/disease#S121
+:S121 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " continuous_feel_of_urine" .
+            
+### http://example.org/disease#S122
+:S122 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " skin_peeling" .
+            
+### http://example.org/disease#S123
+:S123 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " silver_like_dusting" .
+            
+### http://example.org/disease#S124
+:S124 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " small_dents_in_nails" .
+            
+### http://example.org/disease#S125
+:S125 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " inflammatory_nails" .
+            
+### http://example.org/disease#S126
+:S126 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " blister" .
+            
+### http://example.org/disease#S127
+:S127 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " red_sore_around_nose" .
+            
+### http://example.org/disease#S128
+:S128 rdf:type owl:NamedIndividual , :Symptom ;
+    :name " yellow_crust_ooze" .
+            

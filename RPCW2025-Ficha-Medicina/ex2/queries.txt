@@ -1,0 +1,46 @@
+Quantas doenças estão presentes na ontologia?
+
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (COUNT(?doenca) AS ?doencaCount)
+WHERE { 
+  ?doenca a :Disease .
+}
+
+
+Que doenças estão associadas ao sintoma "yellowish_skin"?
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (COUNT(?doenca) AS ?doencaCount)
+WHERE { 
+  ?doenca a :Disease .
+  ?doenca :hasSymptom :S25 .
+}
+
+
+Que doenças estão associadas ao tratamento "exercise"?
+
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (COUNT(?doenca) AS ?doencaCount)
+WHERE { 
+  ?doenca a :Disease .
+  ?doenca :hasTreatment :T12 .
+}
+
+
+Produz uma lista ordenada alfabeticamente com o nome dos doentes.
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?patientName
+WHERE {
+  ?patient a :Patient ;
+           :name ?patientName .
+}
+ORDER BY ASC(?patientName)
+

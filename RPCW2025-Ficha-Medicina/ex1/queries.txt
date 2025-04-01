@@ -1,0 +1,49 @@
+. Quantas classes estão definidas na Ontologia?
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/>
+SELECT (COUNT(?classe) AS ?classCount)
+WHERE { 
+  ?classe a owl:Class .
+}
+
+. Quantas Object Properties estão definidas na Ontologia?
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/>
+SELECT (COUNT(?classe) AS ?classCount)
+WHERE { 
+  ?classe a owl:ObjectProperty .
+}
+
+
+. Quantos indivíduos existem na tua ontologia?
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/>
+SELECT (COUNT(?classe) AS ?classCount)
+WHERE { 
+  ?classe a owl:NamedIndividual .
+}
+
+
+. Quem planta tomates?
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/>
+select ?pessoa where {
+    ?pessoa a :Pessoa .
+    ?pessoa :cultiva :Tomate .
+} 
+
+
+. Quem contrata trabalhadores temporários?
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/>
+select ?pessoa where {
+    ?pessoa a :Pessoa .
+    ?pessoa :contrata ?o .
+} 
