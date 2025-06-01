@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Modo Quiz - JogosDB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body.quiz-body {
+        background-color: #e0e7ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 1rem;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .quiz-card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+    @media (min-width: 768px) { .quiz-card { padding: 2.5rem; } }
+    .quiz-header {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #343a40;
+    }
+    .quiz-card .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+    .quiz-card .badge {
+      font-size: 0.9rem;
+      padding: 0.6em 1em;
+      font-weight: 600;
+    }
+    .alert .bi {
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
+    .question-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 1.5rem;
+    }
+    .correct-answer-text {
+        font-weight: 600;
+    }
+    .quiz-card .form-check-input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+    .quiz-card .form-check {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1rem;
+        border: 2px solid #ced4da;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+        transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+        position: relative;
+    }
+    .quiz-card .form-check:hover {
+        border-color: #adb5bd;
+        background-color: #f8f9fa;
+    }
+    .quiz-card .form-check-label {
+        font-size: 1.05rem;
+        cursor: pointer;
+        width: 100%;
+        user-select: none;
+        color: #212529;
+        line-height: 1.5;
+        padding-left: 0;
+    }
+    .quiz-card .form-check:has(.form-check-input:checked) {
+        border-color: #0d6efd;
+        background-color: #e7f1ff;
+        box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+    }
+    .quiz-card .form-check-input:checked + .form-check-label::before {
+        font-family: 'bootstrap-icons';
+        content: "\F232";
+        color: #0d6efd;
+        font-weight: normal;
+        font-size: 1.2em;
+        margin-right: 0.6em;
+        vertical-align: -0.1em;
+    }
+    .question-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body class="quiz-body">
+
+<div class="quiz-card p-lg-5">
+    <div class="text-center mb-2">
+        <a href="/" class="btn btn-sm btn-outline-secondary position-absolute top-0 start-0 m-3" title="Voltar à Página Inicial"><i class="bi bi-house-door"></i></a>
+    </div>
+    <h1 class="quiz-header text-center mb-4"><i class="bi bi-patch-question-fill text-primary"></i> Modo Quiz</h1>
+
+    <div class="text-center mb-4">
+      <div>
+        <span class="badge bg-success me-2"><i class="bi bi-check-circle"></i> Corretas: {{ corretas }}</span>
+        <span class="badge bg-danger"><i class="bi bi-x-circle"></i> Erradas: {{ erradas }}</span>
+      </div>
+      <div class="mt-3">
+        <a href="{{ url_for('quiz_reset') }}" class="btn btn-sm btn-warning py-1 px-2 fs-6" title="Resetar Pontuação">
+            <i class="bi bi-arrow-counterclockwise"></i> Resetar Quiz
+        </a>
+      </div>
+    </div>
+
+    {% if mostrar_resultado %}
+      <div class="alert {{ 'alert-success' if correta else 'alert-danger' }} d-flex align-items-start" role="alert">
+        {% if correta %}
+          <i class="bi bi-check-circle-fill me-2 flex-shrink-0"></i>
+          <div>
+            <strong>Resposta correta!</strong><br>Mandou bem!
+          </div>
+        {% else %}
+          <i class="bi bi-x-circle-fill me-2 flex-shrink-0"></i>
+          <div>
+            <strong>Resposta errada.</strong><br>
+            A resposta certa era: <span class="correct-answer-text">{{ resposta_correta }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/quiz" class="btn btn-primary btn-lg"><i class="bi bi-arrow-clockwise"></i> Nova Pergunta</a>
+      </div>
+      
+    {% else %}
+      <form method="POST">
+        <div class="mb-3">
+          <h4 class="question-text">{{ pergunta }}</h4>
+        </div>
+
+        {% for opcao in opcoes %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="op{{ loop.index }}" value="{{ opcao }}" required>
+            <label class="form-check-label w-100" for="op{{ loop.index }}">
+              {{ opcao }}
+            </label>
+          </div>
+        {% endfor %}
+
+        <input type="hidden" name="pergunta" value="{{ pergunta }}">
+        <input type="hidden" name="resposta_correta" value="{{ resposta_correta }}">
+
+        <div class="d-grid gap-2 mt-4">
+          <button type="submit" class="btn btn-success btn-lg"><i class="bi bi-check2-square"></i> Submeter Resposta</button>
+        </div>
+      </form>
+    {% endif %}
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
