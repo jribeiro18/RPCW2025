@@ -12,55 +12,55 @@
 #    Object Properties
 #################################################################
 
-###  http://rcpw.di.uminho.pt/2025/historia#contrata
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/contrata
 :contrata rdf:type owl:ObjectProperty ;
           owl:inverseOf :éContratado ;
           rdfs:domain :Pessoa ;
           rdfs:range :Pessoa .
 
 
-###  http://rcpw.di.uminho.pt/2025/historia#cria
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/cria
 :cria rdf:type owl:ObjectProperty ;
       owl:inverseOf :éCriado ;
       rdfs:domain :Pessoa ;
       rdfs:range :Animal .
 
 
-###  http://rcpw.di.uminho.pt/2025/historia#fazGeleia
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/cultiva
+:cultiva rdf:type owl:ObjectProperty ;
+         owl:inverseOf :éCultivado ;
+         rdfs:domain :Pessoa ;
+         rdfs:range :Fruta ,
+                    :Vegetais .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/fazGeleia
 :fazGeleia rdf:type owl:ObjectProperty ;
            owl:inverseOf :éFeita ;
            rdfs:domain :Pessoa ;
            rdfs:range :Geleia .
 
 
-###  http://rcpw.di.uminho.pt/2025/historia#éContratado
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éContratado
 :éContratado rdf:type owl:ObjectProperty .
 
 
-###  http://rcpw.di.uminho.pt/2025/historia#éCriado
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éCriado
 :éCriado rdf:type owl:ObjectProperty .
 
 
-###  http://rcpw.di.uminho.pt/2025/historia#éCultivado
-:éCultivado rdf:type owl:ObjectProperty ;
-            owl:inverseOf :cultiva .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#éFeita
-:éFeita rdf:type owl:ObjectProperty .
-
-
-###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/cultiva
-:cultiva rdf:type owl:ObjectProperty ;
-         rdfs:domain :Pessoa ;
-         rdfs:range :Vegetais ,
-                    :Fruta .
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éCultivado
+:éCultivado rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éFIlho
 :éFIlho rdf:type owl:ObjectProperty ;
         owl:inverseOf :éProgenitor ;
         rdfs:domain :Pessoa .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éFeita
+:éFeita rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/éProgenitor
@@ -72,7 +72,7 @@
 #    Data properties
 #################################################################
 
-###  http://rcpw.di.uminho.pt/2025/historia#temGenero
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/temGenero
 :temGenero rdf:type owl:DatatypeProperty .
 
 
@@ -89,14 +89,6 @@
 #################################################################
 #    Classes
 #################################################################
-
-###  http://rcpw.di.uminho.pt/2025/historia#Geleia
-:Geleia rdf:type owl:Class .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Vegetais
-:Vegetais rdf:type owl:Class .
-
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Agricultor
 :Agricultor rdf:type owl:Class ;
@@ -115,12 +107,20 @@
 :Fruta rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Geleia
+:Geleia rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Localidade
 :Localidade rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Pessoa
 :Pessoa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Vegetais
+:Vegetais rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Vila
@@ -132,71 +132,9 @@
 #    Individuals
 #################################################################
 
-###  http://rcpw.di.uminho.pt/2025/historia#Alface
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Alface
 :Alface rdf:type owl:NamedIndividual ,
                  :Vegetais .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Cao
-:Cao rdf:type owl:NamedIndividual ,
-              :Animal ;
-     :temGenero "M" ;
-     :temNome "Rex" .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Carlos
-:Carlos rdf:type owl:NamedIndividual ,
-                 :Pessoa ;
-        :cultiva :Alface ,
-                 :Cenoura ,
-                 :Tomate ;
-        :temGenero "M" ;
-        :temNome "Carlos" .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Cenoura
-:Cenoura rdf:type owl:NamedIndividual ,
-                  :Vegetais .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Galinha
-:Galinha rdf:type owl:NamedIndividual ,
-                  :Animal .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#GeleiaB
-:GeleiaB rdf:type owl:NamedIndividual ,
-                  :Geleia .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#GeleiaL
-:GeleiaL rdf:type owl:NamedIndividual ,
-                  :Geleia .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#GeleiaM
-:GeleiaM rdf:type owl:NamedIndividual ,
-                  :Geleia .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Porco
-:Porco rdf:type owl:NamedIndividual ,
-                :Animal .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#TT
-:TT rdf:type owl:NamedIndividual ,
-             :Pessoa .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Tomate
-:Tomate rdf:type owl:NamedIndividual ,
-                 :Vegetais .
-
-
-###  http://rcpw.di.uminho.pt/2025/historia#Vaca
-:Vaca rdf:type owl:NamedIndividual ,
-               :Animal .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Ana
@@ -215,6 +153,48 @@
 :Banana rdf:type owl:NamedIndividual ,
                  :Fruta ;
         :temNome "banana" .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Cao
+:Cao rdf:type owl:NamedIndividual ,
+              :Animal ;
+     :temGenero "M" ;
+     :temNome "Rex" .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Carlos
+:Carlos rdf:type owl:NamedIndividual ,
+                 :Pessoa ;
+        :cultiva :Alface ,
+                 :Cenoura ,
+                 :Tomate ;
+        :temGenero "M" ;
+        :temNome "Carlos" .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Cenoura
+:Cenoura rdf:type owl:NamedIndividual ,
+                  :Vegetais .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Galinha
+:Galinha rdf:type owl:NamedIndividual ,
+                  :Animal .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/GeleiaB
+:GeleiaB rdf:type owl:NamedIndividual ,
+                  :Geleia .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/GeleiaL
+:GeleiaL rdf:type owl:NamedIndividual ,
+                  :Geleia .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/GeleiaM
+:GeleiaM rdf:type owl:NamedIndividual ,
+                  :Geleia .
 
 
 ###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/João
@@ -263,6 +243,26 @@
                :Maria ;
        :temGenero "M" ;
        :temNome "Pedro" .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Porco
+:Porco rdf:type owl:NamedIndividual ,
+                :Animal .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/TT
+:TT rdf:type owl:NamedIndividual ,
+             :Pessoa .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Tomate
+:Tomate rdf:type owl:NamedIndividual ,
+                 :Vegetais .
+
+
+###  http://www.semanticweb.org/burak/ontologies/2025/1/untitled-ontology-3/Vaca
+:Vaca rdf:type owl:NamedIndividual ,
+               :Animal .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

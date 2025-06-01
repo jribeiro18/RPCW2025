@@ -44,3 +44,44 @@ WHERE {
 }
 ORDER BY ASC(?patientName)
 
+
+Cria um query SPARQL que poduza uma distribuição dos doentes pelas doenças, ou seja, dá como resultado uma lista de pares (doença, nº de doentes);
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?doenca (COUNT(?doente) AS ?doenteCount)
+WHERE {
+  ?doente a :Patient ;
+          :hasDisease ?doenca .
+}
+GROUP BY ?doenca
+ORDER BY DESC(?doenteCount)
+
+. Cria um query SPARQL que poduza uma distribuição das doenças pelos sintomas, ou seja, dá como
+resultado uma lista de pares (sintoma, nº de doenças com o sintoma);
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?sintoma (COUNT(?doenca) AS ?doencaCount)
+WHERE {
+  ?doenca a :Disease ;
+          :hasSymptom ?sintoma .
+}
+GROUP BY ?sintoma
+ORDER BY DESC(?doencaCount)
+
+. Cria um query SPARQL que poduza uma distribuição das doenças pelos tratamentos, ou seja, dá
+como resultado uma lista de pares (tratamento, nº de doenças com o tratamento).
+
+PREFIX : <http://example.org/disease/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?tratamento (COUNT(?doenca) AS ?doencaCount)
+WHERE {
+  ?doenca a :Disease ;
+          :hasTreatment ?tratamento .
+}
+GROUP BY ?tratamento
+ORDER BY DESC(?doencaCount)
+

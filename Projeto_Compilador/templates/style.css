@@ -1,0 +1,109 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 80px; /* For fixed-top navbar */
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-content {
+    flex: 1 0 auto; /* Allows footer to stick to bottom */
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #343a40 !important;
+}
+.navbar .form-control { border-radius: 0.5rem 0 0 0.5rem; }
+.navbar .btn-outline-primary { border-radius: 0 0.5rem 0.5rem 0; border-left: none; }
+.navbar .nav-link { font-weight: 600; }
+
+.content-wrapper { /* For jogo.html, detalhe_generico.html */
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.08);
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+@media (min-width: 768px) { .content-wrapper { padding: 2.5rem; } }
+
+.page-title {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.custom-card { /* For index.html, lista_generica.html cards */
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.custom-card .card-img-top-custom {
+    object-fit: contain; width: 100%; max-height: 170px; padding: 1rem;
+    border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; background-color: #f8f9fa;
+}
+.custom-card .card-body {
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+.custom-card .card-title { font-size: 1.05rem; font-weight: 600; color: #343a40; margin-bottom: 0.75rem; }
+.custom-card .btn { margin-top: auto; font-weight: 600; }
+
+.cover-img { /* For jogo.html main image */
+    width: 100%; max-height: 400px; object-fit: cover; border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1); margin-bottom: 1.5rem;
+}
+.cover-img-detail { /* For detalhe_generico.html main image */
+    width: 100%; max-height: 300px; object-fit: contain; border-radius: 0.5rem;
+    margin-bottom: 1.5rem; background-color: #e9ecef; padding: 1rem;
+}
+
+.info-label { color: #495057; font-weight: 600; }
+.info-value a { text-decoration: none; font-weight: 500; color: #0d6efd; }
+.info-value a:hover { color: #0a58ca; text-decoration: underline; }
+
+.list-group-item { border-color: #e9ecef; background-color: #fff; }
+.list-group-item a { text-decoration: none; font-weight: 500; color: #0d6efd; }
+.list-group-item a:hover { color: #0a58ca; }
+.list-group-item:hover { background-color: #f8f9fa; }
+
+
+.footer {
+    padding: 2rem 0; background-color: #343a40; color: #adb5bd; margin-top: auto;
+}
+.footer p { margin-bottom: 0; }
+
+.ver-mais-card { /* For "Ver Mais" blocks */
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background-color: #e9ecef; border: 2px dashed #ced4da; color: #495057;
+}
+.ver-mais-card .card-body a { text-decoration: none; color: inherit; font-weight: 600; }
+.ver-mais-card:hover { background-color: #dfe6ec; border-color: #adb5bd; }
+.ver-mais-card .fs-3 { font-size: 2rem !important; font-weight: bold; }
+
+/* Quiz Specific (Only for quiz.html) */
+.quiz-body {
+    background-color: #e0e7ff; /* Calming blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.quiz-card {
+  background-color: white; border-radius: 1rem; box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  padding: 2rem; max-width: 600px; width: 100%;
+}
+@media (min-width: 768px) { .quiz-card { padding: 2.5rem; } }
+.quiz-header { font-size: 1.8rem; font-weight: 700; color: #343a40; }
+.quiz-card .form-check-label { font-size: 1.05rem; padding-top: 2px;}
+.quiz-card .form-check-input { margin-top: 0.4em; }
+.quiz-card .btn { padding: 0.6rem 1.25rem; font-size: 0.95rem; font-weight: 600; }
+.quiz-card .badge { font-size: 0.9rem; padding: 0.6em 1em; font-weight: 600;}
+.alert .bi { font-size: 1.2rem; vertical-align: middle; }
